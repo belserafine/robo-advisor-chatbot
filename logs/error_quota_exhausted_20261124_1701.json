@@ -1,0 +1,33 @@
+{
+  "provider": "Google Gemini",
+  "model": "gemini-3.6-flash",
+  "temperature": 0.2,
+  "system_prompt": "Extract any investor-profile fields the client has stated so far...",
+  "timestamp": "2026-11-24T17:01:00",
+  "logged_manually": "Automated save_transcript() did not run because the script crashed before reaching it; this file was reconstructed by hand from the terminal output.",
+  "status": "incomplete — crashed due to 429 RESOURCE_EXHAUSTED (daily free-tier quota of 20 requests/model exceeded)",
+  "messages": [
+    {"role": "bot", "content": "What is your age? (18–24, 25–34, 35–44, 45–54, 55–64, 65+)"},
+    {"role": "client", "content": "im 23"},
+    {"role": "bot", "content": "What is your current employment status? (student / employed / self-employed / retired)"},
+    {"role": "client", "content": "student"},
+    {"role": "bot", "content": "Do you have any dependants? How many?"},
+    {"role": "client", "content": "no"},
+    {"role": "bot", "content": "What is your approximate annual income? (Under $20,000, $20,000–$39,999, $40,000–$59,999, $60,000–$79,999, $80,000–$99,999, $100,000–$149,999, $150,000+)"},
+    {"role": "client", "content": "under 20k"},
+    {"role": "bot", "content": "What is the amount you're looking to invest today?"},
+    {"role": "client", "content": "1k"},
+    {"role": "bot", "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?"},
+    {"role": "client", "content": "no"},
+    {"role": "bot", "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)"},
+    {"role": "client", "content": "general savings"},
+    {"role": "bot", "content": "Do you have a specific target amount for this goal? (Yes/No)"},
+    {"role": "client", "content": "no"},
+    {"role": "bot", "content": "When will you need this money? (10+ years, 4–10 years, 1–3 years, 0–1 years)"},
+    {"role": "client", "content": "1 year"},
+    {"role": "bot", "content": "When will you need this money? (10+ years, 4–10 years, 1–3 years, 0–1 years)"},
+    {"role": "client", "content": "i will need it in one year"}
+  ],
+  "final_answers": "incomplete — conversation cut off before target_years, exp, rr_familiarity, desc, horizon_years, sectors were collected",
+  "error": "google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED — Quota exceeded for generativelanguage.googleapis.com/generate_content_free_tier_requests, limit 20/day, model gemini-3.6-flash. Retry after ~10h."
+}
