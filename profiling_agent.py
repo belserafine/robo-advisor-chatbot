@@ -8,12 +8,15 @@ from google.genai import types
 from pydantic import BaseModel
 from typing import Literal, Optional, TypedDict, Annotated
 from langgraph.graph.message import add_messages
-from langchain_core.messages import HumanMessage
+import json
+from datetime import datetime
 
 load_dotenv()
 api_key = os.environ["GEMINI_API_KEY"]
 
 llm = genai.Client(api_key=api_key)
+
+MODEL = "gemini-3.5-flash"
 
 # ------------------------------------------
 # 1. QUESTIONNAIRE ANSWERS
@@ -83,7 +86,7 @@ class questionnaire_answers(BaseModel):
 
 def extract_update(conversation_text: str) -> questionnaire_answers:
     response = llm.models.generate_content(
-        model="gemini-3.8-flash", # TODO: can change to any model
+        model=MODEL,
         contents=(
             "Extract any investor-profile fields the client has stated so far. "
             "Leave a field null if it was not mentioned - never guess or infer a value. "
@@ -107,7 +110,7 @@ def merge_answers(current: dict, new: questionnaire_answers | None) -> dict:
     return current
 
 # ------------------------------------------
-# 2. LANGGRAPH CONVERSATION LOOP
+# 3. LANGGRAPH CONVERSATION LOOP
 # ------------------------------------------
 class ChatState(TypedDict):
     # worker appends notes here; operator.add concatenates the lists instead of overwriting
@@ -157,20 +160,89 @@ def all_answered(answers: dict) -> bool:
     return all(value is not None for value in checked.values())
 
 # ------------------------------------------
-# 3.
+# 4. CONTRADICTION CHECK
 # ------------------------------------------
-state = {"messages": [], "answers": questionnaire_answers().model_dump()}
+class ContradictionCheck(BaseModel):
+    has_contradiction: bool
+    clarifying_question: Optional[str] = None
 
-while not all_answered(state["answers"]):
+def check_contradiction(state: ChatState) -> ContradictionCheck:
+    convo_text = "\n".join(f"{role}: {content}" for role, content in state["messages"])
+    response = llm.models.generate_content(
+        model=MODEL,
+        contents=(
+            "Review this investor conversation for contradictions or unrealistic requests — "
+            "e.g. a client who states a low risk tolerance but then asks for a highly concentrated "
+            "or very risky allocation, or asks for a guaranteed high return. "
+            "If you find one, set has_contradiction=true and write a clarifying question to ask the client."
+            "Otherwise set has_contradiction=false and leave clarifying_question null.\n\n"
+            f"Conversation:\n{convo_text}\n\nCurrent profile so far:\n{state['answers']}"
+        ),
+        config=types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=ContradictionCheck,
+            temperature=0.2,
+        ),
+    )
+    return response.parsed
+
+# ------------------------------------------
+# 4. Wrap into a callable function
+# ------------------------------------------
+def run_profiling_turn(state: ChatState, user_message: str | None) -> tuple[str, ChatState]:
+    if user_message is not None:
+        state["messages"].append(("client", user_message))
+        listen_result = listen_node(state)
+        state["answers"] = listen_result["answers"]
+
+        contradiction = check_contradiction(state)
+        if contradiction.has_contradiction:
+            state["messages"].append(("bot", contradiction.clarifying_question))
+            return contradiction.clarifying_question, state
+
+    if all_answered(state["answers"]):
+        return "Thanks, I have everything I need!", state
+
     ask_result = ask_node(state)
     question_text = ask_result["messages"][0][1]
-    print(f"Bot: {question_text}")
-    state["messages"].append(("ai", question_text))
+    state["messages"].append(("bot", question_text))
+    return question_text, state
 
-    user_text = input("You: ")
-    state["messages"].append(("human", user_text))
+RUN_METADATA = {
+    "provider": "Google Gemini",
+    "model": MODEL,
+    "temperature": 0.2,
+    "system_prompt": "Extract any investor-profile fields the client has stated so far...",
+}
 
-    listen_result = listen_node(state)
-    state["answers"] = listen_result["answers"]
+def save_transcript(state: ChatState, label: str = "conversation"):
+    record = {
+        **RUN_METADATA,
+        "timestamp": datetime.now().isoformat(),
+        "messages": [{"role": role, "content": content} for role, content in state["messages"]],
+        "final_answers": state["answers"],
+    }
+    filename = f"logs/{label}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    with open(filename, "w") as f:
+        json.dump(record, f, indent=2)
+    return filename
 
-print("All done! Final profile:", state["answers"])
+# ------------------------------------------
+# 5. Testing
+# ------------------------------------------
+os.makedirs("logs", exist_ok=True)
+
+if __name__ == "__main__":
+    state = {"messages": [], "answers": questionnaire_answers().model_dump()}
+
+    bot_msg, state = run_profiling_turn(state, None)
+    print("Bot:", bot_msg)
+
+    while not all_answered(state["answers"]):
+        user_msg = input("You: ")
+        bot_msg, state = run_profiling_turn(state, user_msg)
+        print("Bot:", bot_msg)
+
+    print("Final profile:", state["answers"])
+    filename = save_transcript(state, label="test_run")
+    print("Saved to:", filename)
