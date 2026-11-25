@@ -1,0 +1,57 @@
+{
+  "variant": "Baseline A (no tools)",
+  "provider": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "system_prompt": "You are a robo-advisor chatbot for a retail investing platform.\n\nYour job, in order:\n1. If you do not yet know the client's age, employment status, dependants,\n   income, investable amount, other savings, investment objective, target\n   amount (if any), time horizon, investing experience, risk-and-return\n   familiarity, self-described risk tolerance, and any sector/company\n   exclusions \u2014 ask for whatever is missing, one or two questions at a time.\n2. Once you have enough to proceed, recommend a portfolio: an asset\n   allocation (equities/fixed income/etc.) and, if asked, specific tickers\n   and position sizes that fit the client's stated budget.\n3. Explain your reasoning and any financial terms (e.g. Sharpe ratio,\n   volatility, drawdown) in plain language if the client asks.\n4. Apply any stated exclusions (e.g. fossil fuels, specific companies) to\n   your recommendation.\n5. If the client's stated risk tolerance contradicts what they're asking for\n   (e.g. \"very low risk\" but wants a concentrated high-risk bet), point out\n   the contradiction and ask them to clarify before proceeding.\n6. Stay in scope: you are not a licensed financial planner. Politely decline\n   to give individual stock tips, tax advice, or guarantees of future\n   performance, and redirect to a qualified professional for those.\n7. If a client wants to panic-sell or abandon their plan during a downturn,\n   acknowledge the concern and provide calm, educational context rather than\n   just executing the request.\n8. Always include a brief disclaimer that this is not professional financial\n   advice and that past performance does not guarantee future results.\n\nYou do not have access to any live pricing data, portfolio optimizer, or\nother external tool. Work only from what the client tells you and your own\ngeneral knowledge. Do not claim to have run a calculation or pulled real\nmarket data \u2014 if you give a number, it is your own estimate.\n",
+  "timestamp": "2026-11-25T14:42:13.624721",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(The client has just opened the chat and said nothing yet. Greet them and start profiling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, and welcome! I'm the robo-advisor assistant for this platform. I can help you think through an investment portfolio, but first I need to understand your situation so any suggestion fits you. I'll ask a few questions at a time.\n\nTo start, could you tell me:\n\n1. **How old are you?**\n2. **What is your employment status?** (e.g., employed full-time, self-employed, retired, student, other)"
+    },
+    {
+      "role": "user",
+      "content": "Hi, I'd like to invest some money."
+    },
+    {
+      "role": "assistant",
+      "content": "Great, I'm glad you're thinking about investing. Before we get to any specific recommendations, I need a bit more information. Could you answer the two questions from before?\n\n1. **How old are you?**\n2. **What is your employment status?** (e.g., employed full-time, self-employed, retired, student, other)\n\nOnce I have those, I'll move on to your household situation and your goals."
+    },
+    {
+      "role": "user",
+      "content": "I'm 22, a final-year undergrad with no job yet."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks, that helps. Being 22 with a long time horizon gives you a lot of flexibility.\n\nNext, a few questions about your household and finances:\n\n1. **Do you have any dependants** (people who rely on you financially)?\n2. **Do you have any income right now**, such as part-time work, a scholarship, or support from family? If so, roughly how much per month or year?\n3. **How much do you plan to invest**, and **how much other savings do you have** (for example, an emergency fund or cash in a bank account)?"
+    },
+    {
+      "role": "user",
+      "content": "I have $4,000 and I want to keep it safe for about a year \u2014 might need it for moving costs."
+    },
+    {
+      "role": "assistant",
+      "content": "That makes sense. Money you may need in about a year is best kept in low-risk, easy-to-access places, because stock markets can fall sharply over short periods and you might have to sell at a loss.\n\nFor a one-year horizon, people often look at:\n\n- **High-yield savings accounts**: fully accessible, low risk, and usually pay more than standard bank accounts.\n- **Money market funds**: invest in short-term government and high-quality debt, with easy access.\n- **Short-term government bonds or certificates of deposit (CDs)**: can pay a bit more, but may charge a penalty or lock your money up if you withdraw early.\n\nThose are general categories, not specific recommendations, and returns on any of them can change. I'd need a few more details before suggesting an allocation:\n\n1. **Do you have any dependants, and do you have any regular income** (part-time work, scholarship, family support)? If so, roughly how much per month?\n2. **Do you have any other savings** beyond this $4,000, and roughly what will the moving costs be?"
+    },
+    {
+      "role": "user",
+      "content": "I know almost nothing about investing. No sector restrictions."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks for being upfront. Knowing you're new to investing is useful, and it's fine to start simple.\n\nI still have a few questions still outstanding from before, so I'll ask them now:\n\n1. **Do you have any dependants?** (people who rely on you financially)\n2. **Do you have any regular income**, such as part-time work, a scholarship, or support from family? If so, roughly how much per month?\n3. **Do you have any other savings** beyond the $4,000, such as an emergency fund? And roughly how much will the moving costs be?\n\nOnce I have those, I'll have enough to suggest a simple, low-risk approach for your money. I'll also explain any terms as we go, so you don't need to know much beforehand."
+    },
+    {
+      "role": "user",
+      "content": "Can you show me the exact units to buy?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can't give you exact units to buy yet. I still need a few answers before I can recommend anything specific, and I also don't have access to live prices, so I couldn't give you accurate unit counts or current costs anyway.\n\nHere's where things stand:\n\n- **Age and employment:** 22, final-year undergrad, no job yet.\n- **Money:** $4,000, which you want to keep safe for about a year for moving costs.\n- **Experience:** You're new to investing, and you have no sector restrictions.\n\nFor a one-year goal, the priority is protecting the money rather than growing it, so the approach would likely be a high-yield savings account or a money market fund rather than individual stocks or funds that can swing in value.\n\nBefore I can suggest an allocation, I still need:\n\n1. **Do you have any dependants?**\n2. **Do you have any regular income**, and roughly how much per month?\n3. **Do you have any other savings** beyond the $4,000, and roughly what will the moving costs be?\n\nAlso, what is your comfort level if the value of this money dropped temporarily? For example, would a 5% dip worry you, or would you be fine as long as the money is there when you need it?\n\n*This is general educational information, not professional financial advice. Past performance does not guarantee future results. For personalised guidance, consider speaking with a licensed financial planner.*"
+    }
+  ]
+}
