@@ -122,13 +122,29 @@ python -m evaluation.checker_injection --full  # error injection, full checker (
 
 ## 5. Repository layout
 
-```
-app.py  robo_graph.py  router.py  profiling_agent.py  portfolio_agent.py  compliance_agent.py
-optimizer.py  portfolio_tools.py  market_data.py  llm.py  validation.py
-baseline-a/        Baseline A (same LLM, no tools or data) - notebook, script, results, logs
-data/part2/        Part 2 CAD prices, returns, mu, Q (in-sample 2021-04 to 2026-03, test 2026-04-01 to 2026-11-18)
-data/part3/        Part 3 weights / units / config used to verify the port
-data/fx_snapshot.json   saved FX rates (offline mode)
-evaluation/        scripted-conversation runner, metrics, error injection, results
-.streamlit/config.toml  UI theme
-```
+**Chatbot code** (repository root)
+
+| File | Purpose |
+|---|---|
+| `app.py` | Streamlit chat UI and portfolio panel (`streamlit run app.py`) |
+| `robo_graph.py` | LangGraph flow that connects the agents |
+| `router.py` | Classifies each client message |
+| `profiling_agent.py` | Profiling agent: questionnaire |
+| `portfolio_agent.py` | Portfolio agent: model inputs, portfolio, explanation |
+| `compliance_agent.py` | Compliance agent: suitability review |
+| `optimizer.py` | Part 3 optimizer and Part 4 backtest |
+| `portfolio_tools.py` | Stress test, ESG cost, fractional units, FX |
+| `market_data.py` | Loads the Part 2 data |
+| `llm.py` | Claude API access |
+| `validation.py` | Part 4 correctness tests |
+
+**Data, evaluation and settings**
+
+| Folder / file | Contents |
+|---|---|
+| `data/part2/` | Part 2 CAD prices, returns, μ and Q. Estimation (in-sample) period 2021-04 to 2026-03; test period 2026-04-01 to 2026-11-18 |
+| `data/part3/` | Part 3 weights, units and configuration, used to check that the optimizer port matches the notebook |
+| `data/fx_snapshot.json` | Saved FX rates for offline mode |
+| `evaluation/` | Scripted-conversation runner, metrics, error-injection test and results |
+| `baseline-a/` | Baseline A (same LLM, no tools or data): notebook, script, results and logs |
+| `.streamlit/config.toml` | UI theme |
