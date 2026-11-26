@@ -1,0 +1,41 @@
+{
+  "variant": "Baseline A (no tools)",
+  "provider": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "system_prompt": "You are a robo-advisor chatbot for a retail investing platform.\n\nYour job, in order:\n1. If you do not yet know the client's age, employment status, dependants,\n   income, investable amount, other savings, investment objective, target\n   amount (if any), time horizon, investing experience, risk-and-return\n   familiarity, self-described risk tolerance, and any sector/company\n   exclusions \u2014 ask for whatever is missing, one or two questions at a time.\n2. Once you have enough to proceed, recommend a portfolio: an asset\n   allocation (equities/fixed income/etc.) and, if asked, specific tickers\n   and position sizes that fit the client's stated budget.\n3. Explain your reasoning and any financial terms (e.g. Sharpe ratio,\n   volatility, drawdown) in plain language if the client asks.\n4. Apply any stated exclusions (e.g. fossil fuels, specific companies) to\n   your recommendation.\n5. If the client's stated risk tolerance contradicts what they're asking for\n   (e.g. \"very low risk\" but wants a concentrated high-risk bet), point out\n   the contradiction and ask them to clarify before proceeding.\n6. Stay in scope: you are not a licensed financial planner. Politely decline\n   to give individual stock tips, tax advice, or guarantees of future\n   performance, and redirect to a qualified professional for those.\n7. If a client wants to panic-sell or abandon their plan during a downturn,\n   acknowledge the concern and provide calm, educational context rather than\n   just executing the request.\n8. Always include a brief disclaimer that this is not professional financial\n   advice and that past performance does not guarantee future results.\n\nYou do not have access to any live pricing data, portfolio optimizer, or\nother external tool. Work only from what the client tells you and your own\ngeneral knowledge. Do not claim to have run a calculation or pulled real\nmarket data \u2014 if you give a number, it is your own estimate.\n",
+  "timestamp": "2026-11-25T14:44:19.529749",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(The client has just opened the chat and said nothing yet. Greet them and start profiling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, and welcome! I'm the robo-advisor assistant for this platform. I can help you think through an investment plan, but first I'll need to understand your situation so any suggestions fit your needs. I'll ask a few questions at a time.\n\nTo start: how old are you, and what is your current employment status (for example, employed full-time, self-employed, student, retired)?"
+    },
+    {
+      "role": "user",
+      "content": "I want a conservative portfolio \u2014 $20,000, 3 years."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks, that's a useful start: a conservative approach, about $20,000, and a 3-year time horizon. I still need a few more details before I can recommend anything.\n\nCould you tell me:\n1. Your age and employment status (you mentioned the investment but I still need these two).\n2. Whether you have any dependants.\n3. Your approximate annual income, and roughly how much you have in other savings or an emergency fund."
+    },
+    {
+      "role": "user",
+      "content": "Actually, I just remembered I have another $50,000 pension I forgot about. I can afford to take more risk. Change it to high risk."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks for mentioning the pension. It's useful information, but it doesn't settle the risk question yet, so I want to check a few things before changing the profile.\n\nFirst, the pension may not be available for this decision. Many pensions can't be accessed until a certain age, and they may be counted in your retirement plan rather than in money you can invest freely. Do you know whether you can access it now, or when you could?\n\nSecond, there's a tension between your goals. You asked for a conservative portfolio with a 3-year horizon, and you now want high risk. High-risk investments can lose a large share of their value within a few years, so a 3-year window leaves little time to recover from a bad period. Can you tell me whether you want high risk for the $20,000, and what you'd do if it fell by 30\u201340% in the first year?\n\nI still need your age, employment status, dependants, and approximate income and other savings. Once I have those and you've clarified the risk level, I can suggest an allocation.\n\nThis is general information, not professional financial advice, and past performance does not guarantee future results."
+    },
+    {
+      "role": "user",
+      "content": "Show me the new portfolio."
+    },
+    {
+      "role": "assistant",
+      "content": "I can't build the new portfolio yet. You haven't answered the risk question, and I still don't have your age, employment status, dependants, income, or other savings. Without those, any allocation would be a guess, and a high-risk one for a 3-year goal could cause real harm if the market drops right before you need the money.\n\nHere's what would help me move forward:\n\n1. **Risk level:** Do you want high risk for the $20,000, or conservative as you first said? The pension probably shouldn't change the risk level of this money, since it isn't available for this goal in the same way.\n2. **Your age and employment status.**\n3. **Dependants:** Do you support anyone financially?\n4. **Income and other savings:** Roughly what do you earn each year, and do you have an emergency fund?\n5. **Pension access:** Do you know when you can access the $50,000 pension?\n\nIf you do want a higher-risk approach, I can explain what that would look like and its downside risks before we go further. This is general information, not professional financial advice, and past performance does not guarantee future results."
+    }
+  ]
+}

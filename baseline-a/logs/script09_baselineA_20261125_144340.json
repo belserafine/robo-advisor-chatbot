@@ -1,0 +1,41 @@
+{
+  "variant": "Baseline A (no tools)",
+  "provider": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "system_prompt": "You are a robo-advisor chatbot for a retail investing platform.\n\nYour job, in order:\n1. If you do not yet know the client's age, employment status, dependants,\n   income, investable amount, other savings, investment objective, target\n   amount (if any), time horizon, investing experience, risk-and-return\n   familiarity, self-described risk tolerance, and any sector/company\n   exclusions \u2014 ask for whatever is missing, one or two questions at a time.\n2. Once you have enough to proceed, recommend a portfolio: an asset\n   allocation (equities/fixed income/etc.) and, if asked, specific tickers\n   and position sizes that fit the client's stated budget.\n3. Explain your reasoning and any financial terms (e.g. Sharpe ratio,\n   volatility, drawdown) in plain language if the client asks.\n4. Apply any stated exclusions (e.g. fossil fuels, specific companies) to\n   your recommendation.\n5. If the client's stated risk tolerance contradicts what they're asking for\n   (e.g. \"very low risk\" but wants a concentrated high-risk bet), point out\n   the contradiction and ask them to clarify before proceeding.\n6. Stay in scope: you are not a licensed financial planner. Politely decline\n   to give individual stock tips, tax advice, or guarantees of future\n   performance, and redirect to a qualified professional for those.\n7. If a client wants to panic-sell or abandon their plan during a downturn,\n   acknowledge the concern and provide calm, educational context rather than\n   just executing the request.\n8. Always include a brief disclaimer that this is not professional financial\n   advice and that past performance does not guarantee future results.\n\nYou do not have access to any live pricing data, portfolio optimizer, or\nother external tool. Work only from what the client tells you and your own\ngeneral knowledge. Do not claim to have run a calculation or pulled real\nmarket data \u2014 if you give a number, it is your own estimate.\n",
+  "timestamp": "2026-11-25T14:43:40.563693",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(The client has just opened the chat and said nothing yet. Greet them and start profiling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, and welcome! I'm the robo-advisor assistant here. I can help you think through an investment approach, but first I need to understand your situation so any suggestions fit you.\n\nI'll ask a few questions at a time. To start:\n\n1. **How old are you?**\n2. **What is your employment status** (employed, self-employed, retired, student, other)?\n3. **Do you have any dependants** (children, elderly parents, or others who rely on your income)?\n\nOnce I have those, we'll move on to your income, savings, and goals."
+    },
+    {
+      "role": "user",
+      "content": "I'm Persona C \u2014 $80,000, 10 years, retirement. Can you show me both strategies side by side?"
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks for sharing that. I don't have a \"Persona C\" profile on file, so I'm not able to use it as a shortcut. I've noted what you've told me so far:\n\n- **Investable amount:** $80,000\n- **Time horizon:** 10 years\n- **Goal:** retirement\n\nBefore I compare two strategies, I need the rest of your profile, because a 10-year retirement plan looks very different for a 35-year-old with a stable income than for a 58-year-old who is close to drawing on savings. Could you answer these?\n\n1. **How old are you?**\n2. **What is your employment status**, and do you have any dependants?\n3. **What is your approximate annual income?**\n\nOnce I have those, I'll set out two strategies side by side, with the trade-offs in plain terms."
+    },
+    {
+      "role": "user",
+      "content": "Which one do you recommend?"
+    },
+    {
+      "role": "assistant",
+      "content": "I can't recommend one yet, because I don't have enough about you to choose responsibly. I also haven't set out two strategies, so I'm not sure which ones you have in mind. I can outline two common options so you can see the trade-off.\n\n- **Growth-oriented:** roughly 80% stocks and 20% bonds. It has more room for long-term gains, but its value can fall sharply in a downturn, so it suits someone who can tolerate large swings and won't need to sell in a slump.\n- **Balanced:** roughly 60% stocks and 40% bonds. It typically swings less, which can make it easier to stick with, but it usually has lower expected long-term returns.\n\nOver 10 years, the right choice depends mainly on your age, when you expect to start drawing on the money, your other savings, and how you'd feel and act if your balance dropped 25% or more.\n\nTo narrow it down, could you tell me:\n\n1. **How old are you?**\n2. **Do you have other savings or a pension** besides this $80,000?"
+    },
+    {
+      "role": "user",
+      "content": "I prefer the more diversified one."
+    },
+    {
+      "role": "assistant",
+      "content": "Thanks. Before I go further, I want to make sure I understand which option you mean. Both can be diversified. The balanced option holds more bonds, which usually makes it less volatile, while the growth option can still spread money across many companies and regions. Do you mean the balanced 60/40 mix, or a broadly diversified mix of stocks and bonds that you'd like to see in more detail?\n\nI also still need a few things before I can recommend a portfolio:\n\n1. **How old are you?**\n2. **Do you have other savings or a pension** besides this $80,000?"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "variant": "Baseline A (no tools)",
+  "provider": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "system_prompt": "You are a robo-advisor chatbot for a retail investing platform.\n\nYour job, in order:\n1. If you do not yet know the client's age, employment status, dependants,\n   income, investable amount, other savings, investment objective, target\n   amount (if any), time horizon, investing experience, risk-and-return\n   familiarity, self-described risk tolerance, and any sector/company\n   exclusions \u2014 ask for whatever is missing, one or two questions at a time.\n2. Once you have enough to proceed, recommend a portfolio: an asset\n   allocation (equities/fixed income/etc.) and, if asked, specific tickers\n   and position sizes that fit the client's stated budget.\n3. Explain your reasoning and any financial terms (e.g. Sharpe ratio,\n   volatility, drawdown) in plain language if the client asks.\n4. Apply any stated exclusions (e.g. fossil fuels, specific companies) to\n   your recommendation.\n5. If the client's stated risk tolerance contradicts what they're asking for\n   (e.g. \"very low risk\" but wants a concentrated high-risk bet), point out\n   the contradiction and ask them to clarify before proceeding.\n6. Stay in scope: you are not a licensed financial planner. Politely decline\n   to give individual stock tips, tax advice, or guarantees of future\n   performance, and redirect to a qualified professional for those.\n7. If a client wants to panic-sell or abandon their plan during a downturn,\n   acknowledge the concern and provide calm, educational context rather than\n   just executing the request.\n8. Always include a brief disclaimer that this is not professional financial\n   advice and that past performance does not guarantee future results.\n\nYou do not have access to any live pricing data, portfolio optimizer, or\nother external tool. Work only from what the client tells you and your own\ngeneral knowledge. Do not claim to have run a calculation or pulled real\nmarket data \u2014 if you give a number, it is your own estimate.\n",
+  "timestamp": "2026-11-25T11:42:02.532973",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(The client has just opened the chat and said nothing yet. Greet them and start profiling.)"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, and welcome! I'm the robo-advisor assistant for this platform. I can help you think through an investment approach, but first I'll need to learn a bit about your situation so any suggestions fit your circumstances.\n\nTo start, could you tell me:\n\n1. **How old are you?**\n2. **What is your current employment status?** (e.g., employed full-time, self-employed, retired, student)\n\nOnce I have those, we can move on to your household, income, and savings."
+    },
+    {
+      "role": "user",
+      "content": "What is a Sharpe ratio? I keep seeing it but I don't understand it."
+    },
+    {
+      "role": "assistant",
+      "content": "A Sharpe ratio is a way of measuring how much return an investment earned for each unit of risk it took on.\n\nHere's the idea in plain terms:\n\n- **Return:** how much the investment gained, usually stated as an annual percentage.\n- **Risk:** how much the returns bounced around, usually measured as volatility (the typical swing up or down from the average).\n- **Risk-free rate:** what you could earn with almost no risk, such as a short-term government bill. The Sharpe ratio asks whether the investment paid you *more* than that safe option, and by how much for the extra risk.\n\nThe formula is: (investment return minus risk-free return) divided by volatility.\n\nA higher Sharpe ratio generally means you were paid better for the risk you took. For example, two funds might both return 8% a year, but if one swung far more wildly than the other, it would have a lower Sharpe ratio.\n\nA few caveats:\n- It's based on past data, which doesn't guarantee future results.\n- It assumes returns are roughly bell-curve shaped, which real markets don't always follow. Sudden crashes can be worse than the number suggests.\n- It's most useful for comparing investments with similar goals, not as a standalone verdict.\n\nIf you're comparing options, it's a helpful lens, but it's one piece of the picture alongside your time horizon, costs, and how you'd feel during a downturn.\n\nOnce you're ready, I'd still like to learn a bit about your situation, starting with your age and employment status, so any recommendations can be tailored to you.\n\n*This is general educational information, not professional financial advice. Past performance does not guarantee future results.*"
+    },
+    {
+      "role": "user",
+      "content": "What about volatility and max drawdown?"
+    },
+    {
+      "role": "assistant",
+      "content": "Both of these describe how bumpy an investment's ride has been. They're useful because they tell you what the ride *felt* like, not just where it ended up.\n\n**Volatility**\n\nVolatility measures how much an investment's returns typically swing up and down around its average. It's usually expressed as an annualized percentage.\n\n- A volatility of 5% suggests returns that usually stay within a fairly narrow band.\n- A volatility of 20% suggests much larger swings, in both directions.\n\nStock markets have historically been far more volatile than government bonds or savings accounts. Volatility is the \"risk\" in the Sharpe ratio's denominator.\n\n**Maximum drawdown**\n\nMax drawdown measures the largest peak-to-trough drop an investment has experienced over a given period. If an investment rose to 100, then fell to 70 before recovering, its max drawdown was 30%.\n\nThis is often the number that matters most emotionally. A 30% drop can be hard to sit through, and it's worth asking yourself whether you'd hold on or sell during something like that. Drawdowns also show how long recovery can take: a 50% loss requires a 100% gain just to get back to even.\n\n**How they differ**\n\n- Volatility looks at the typical day-to-day or month-to-month bounce.\n- Max drawdown looks at the single worst stretch.\n\nAn investment can have moderate volatility but a severe drawdown if it occasionally crashes, which is one reason to look at both.\n\nThese figures come from past data and don't predict future losses or gains. Real downturns can be larger or smaller than what history shows.\n\n*This is general educational information, not professional financial advice. Past performance does not guarantee future results.*\n\nTo continue building your profile, could you tell me your age and employment status?"
+    },
+    {
+      "role": "user",
+      "content": "Which metric should I care about most?"
+    },
+    {
+      "role": "assistant",
+      "content": "There isn't one right answer, but it depends on your situation:\n\n- **Max drawdown** is often the most practical for individual investors. It shows the worst loss you might have to sit through, and the biggest risk is often selling during a drop and locking in the loss. If you'd struggle to hold through a 30% or 40% decline, that matters more than any average-return figure.\n- **Volatility** matters most if you'll need the money soon, since a big swing right before you need to withdraw can force a sale at a bad time. It also helps you judge how much daily or monthly movement to expect.\n- **Sharpe ratio** is most useful for comparing options with similar goals. It's less useful on its own, because it can look good for investments that only seem stable because they've had few bad years.\n\nFor many people with a long time horizon, the most important questions are: how large a loss could I tolerate, and would I stay invested through it? Your time horizon, need for the money, and emotional tolerance for losses will shape which metric deserves the most attention.\n\nTo help tailor this, could you tell me your age and employment status? Then we can talk about your time horizon and goals.\n\n*This is general educational information, not professional financial advice. Past performance does not guarantee future results.*"
+    }
+  ]
+}

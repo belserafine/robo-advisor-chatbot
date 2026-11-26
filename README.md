@@ -19,7 +19,6 @@ cd robo-advisor-chatbot
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 echo "ANTHROPIC_API_KEY=sk-ant-..." > .env              # your own key; .env is git-ignored
-python test-llm.py                                      # optional: checks the key works
 streamlit run app.py                                    # opens http://localhost:8501
 ```
 
@@ -125,7 +124,8 @@ python -m evaluation.checker_injection --full  # error injection, full checker (
 
 ```
 app.py  robo_graph.py  router.py  profiling_agent.py  portfolio_agent.py  compliance_agent.py
-optimizer.py  portfolio_tools.py  market_data.py  llm.py  validation.py  test-llm.py
+optimizer.py  portfolio_tools.py  market_data.py  llm.py  validation.py
+baseline-a/        Baseline A (same LLM, no tools or data) - notebook, script, results, logs
 data/part2/        Part 2 CAD prices, returns, mu, Q (in-sample 2021-04 to 2026-03, test 2026-04-01 to 2026-11-18)
 data/part3/        Part 3 weights / units / config used to verify the port
 data/fx_snapshot.json   saved FX rates (offline mode)
