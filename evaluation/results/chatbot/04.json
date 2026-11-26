@@ -1,0 +1,599 @@
+{
+  "id": "04",
+  "title": "Persona B - Strategy 2 (ESG)",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 105.4,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "sectors",
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "other_assets",
+    "cash_needed_now",
+    "target_yn",
+    "target",
+    "exp",
+    "rr_familiarity",
+    "desc",
+    "principal_protection"
+  ],
+  "answers": {
+    "age": "25-34",
+    "employment": "employed",
+    "num_dependants": 0,
+    "income": "$80,000 \u2013 $99,999",
+    "invest_amount": 35000,
+    "other_assets": "$20,000 in emergency savings and $15,000 in other investments",
+    "cash_needed_now": 0,
+    "objective_str": "Buy a house",
+    "target_yn": "Yes",
+    "target": 50000,
+    "target_years": "4-10 years",
+    "exp": "some",
+    "rr_familiarity": "Yes",
+    "desc": "Moderate risk",
+    "principal_protection": "No",
+    "horizon_years": "4\u201310 years",
+    "sectors": "fossil fuel companies, AI companies"
+  },
+  "released_portfolio": true,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Same profile \u2014 $35,000, 5 years, home purchase, ESG exclusions.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "I can't tell which companies \"ESG exclusions\" should exclude. I can screen out fossil fuels, AI companies, a sector (e.g. energy, technology) or specific companies in our universe.\n\nAre there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Please exclude fossil fuel companies and AI companies.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 30.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I work full-time.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "None.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "About $85,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have $20,000 in emergency savings and $15,000 in other investments.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, none of it right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$50,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Some - I've invested a little before.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Which statement best describes you? (Very low risk / Low risk / Moderate risk / High risk)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Moderate risk is fine.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I'm okay with some ups and downs.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "## Your Recommended Portfolio\n\n**How your answers set the limits:** Your answers point to a moderate risk level and a 4-10 year goal of buying a house. For that profile, the portfolio's estimated volatility is capped at **10.0%**, and at least **20.0%** is held in fixed income. No single holding can exceed **30.0%**. For the model, the 4-10 year range was modelled as 5 years. This is the fixed value the model uses for this answer range, not the midpoint of the range or a figure chosen for you.\n\n**Why this strategy:** Strategy 2 (reverse optimization + Markowitz) is this tool's default for every client. It was chosen in advance by design, not by looking at the backtest. It estimates expected returns from market risk rather than from past averages, so it is less sensitive to noise in historical data. It holds 8 assets.\n\n**Alternatives:**\n- **Strategy 1** holds 5 assets. Its realized volatility in the test period was 12.2%, above your cap.\n- **Equal weight** (benchmark) holds 18 assets. Its estimated volatility is 10.9%, above your cap. It did better in the test period, with a 9.8% total return.\n\n**Backtest:** Over the 7.6-month test period, Strategy 2 returned a total of 7.9%. That was below the equal-weight benchmark's 9.8%, but above Strategy 1's 4.0%. These are total returns for the test period, not annual rates.\n\n**Expected return:** The 6.3% expected annual return is a model estimate from reverse optimization, based on returns implied by the covariance matrix and a 60/40 reference portfolio. It is not a historical average and not a promise. The 10.0% volatility cap limits risk but does not guarantee your principal; the value can fall.\n\n**Asset mix:** Equity 65.6%, Fixed Income 33.9%, Cash & fees 0.5%. Largest holdings: VTI (29.4%), XIU.TO (24.3%), and ZAG.TO (19.5%).\n\n**House goal:** Your $34,840.11 invested, growing at 6.3% for 5 years, is illustrated at $47,413.23, which is below your $50,000.00 target. This is an illustration only. In the test period the annualized return was 12.4%, but returns vary and the value can end below the target.\n\n**Profile adjustments:** None were needed.\n\n*Past performance does not guarantee future results.*\n\n**About your exclusions (AI companies, fossil fuels):** I removed the individual tickers flagged in our data (AAPL, ENB.TO, GOOGL, MSFT, QQQ, XOM). This screen works at the ticker level only - the funds' underlying holdings were not checked, so the funds and diversified holdings in your portfolio (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) very likely still hold some of these companies - broad market funds own most large companies in their market. If that is not acceptable, tell me which ETFs to exclude as well and I will rebuild the portfolio.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 41,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Show me Strategy 2 (reverse optimization).",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Sure - here is **Strategy 2: Reverse optimization + Markowitz** for your profile.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 1,
+          "invented": []
+        },
+        {
+          "content": "**Your recommended portfolio**\n\nYour answers set the limits: a moderate risk level, a volatility cap of 10.0% (the optimizer keeps estimated volatility at or below this), and at least 20.0% in fixed income. This portfolio holds 33.9% fixed income, 65.6% equity, and 0.5% cash & fees across 8 assets. The largest holdings are VTI (29.4%), XIU.TO (24.3%), and ZAG.TO (19.5%). No profile adjustments were made.\n\n**Why this strategy**\n\nStrategy 2 is this tool's default for every client, chosen in advance by design rather than by its backtest. Its expected returns come from market risk rather than historical averages, so it is less sensitive to noise in past returns. Strategy 1 holds 5 assets, and its realized volatility in the test period was 12.2%, above your cap. The equal-weight benchmark is shown only for comparison, since its estimated volatility of 10.9% is also above your cap.\n\n**How it did**\n\nIn the held-out test (2026-04-01 to 2026-11-18, 7.6 months), Strategy 2 returned 7.9% in total, compared with 4.0% for Strategy 1 and 9.8% for the equal-weight benchmark. It trailed the benchmark in this period, though one short test does not predict the future. These are total returns for the test period, not annual rates.\n\n**Expected return**\n\nThe 6.3% expected annual return is a model estimate. It is produced by reverse optimization, which backs out returns implied by the covariance matrix and a 60/40 reference portfolio. It is not a historical average or a promise. The volatility cap limits risk but does not guarantee your principal, so the value can fall. The 4-10 years range was modelled as 5 years: the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for this client.\n\n**Illustrative goal**\n\nFor your $50,000.00 house goal, your $34,840.11 invested would grow to an illustrative $47,413.23 at the 6.3% estimate. That falls short of the target. In the test period, the annualized return was 12.4%, but returns vary, so reaching the target is not assured.\n\nPast performance does not guarantee future results.\n\n**About your exclusions (AI companies, fossil fuels):** I removed the individual tickers flagged in our data (AAPL, ENB.TO, GOOGL, MSFT, QQQ, XOM). This screen works at the ticker level only - the funds' underlying holdings were not checked, so the funds and diversified holdings in your portfolio (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) very likely still hold some of these companies - broad market funds own most large companies in their market. If that is not acceptable, tell me which ETFs to exclude as well and I will rebuild the portfolio.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 40,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "How does this compare to Strategy 1 for me?",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Here's how the two strategies compare, using the figures from your results:\n\n| | **Strategy 2** (recommended) | **Strategy 1** |\n|---|---|---|\n| Holdings | 8 | 5 |\n| Expected annual return (model estimate) | 6.3% | 15.1% |\n| Expected volatility | 10.0% | 10.0% |\n| Test total return (7.6 months) | 7.9% | 4.0% |\n| Test volatility | 8.9% | 12.2% |\n| Max drawdown in test | -3.1% | -5.5% |\n| Sharpe ratio | 1.14 | 0.32 |\n| Avg monthly turnover | 0.9% | 1.7% |\n\nStrategy 1 has the higher expected return estimate, but that figure is based on historical averages. In the test period it was more volatile, fell further, and returned less. Its realized volatility of 12.2% was also above your 10.0% cap. Strategy 2 is more diversified, with 8 holdings compared with 5.\n\nExpected returns are model estimates, not promises, and one 7.6-month test is a short window.\n\n**Which matters more to you: a higher expected return, smaller drops along the way, or broader diversification?** Let me know and I can explain that trade-off further.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 26,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Please give me the units.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Here are the units for your recommended Strategy 2 portfolio:\n\n| Ticker | Name | Units |\n|---|---|---|\n| VTI | Vanguard Total Market ETF | 20 |\n| XIU.TO | iShares S&P/TSX 60 ETF | 163 |\n| ZAG.TO | BMO Aggregate Bond ETF | 505 |\n| AGG | iShares Core US Bond ETF | 37 |\n| ACWV | iShares MSCI ACWI Min Vol ETF | 14 |\n| XESG.TO | iShares ESG MSCI Canada ETF | 25 |\n| ICLN | iShares Global Clean Energy | 17 |\n| XRE.TO | iShares Canadian REIT ETF | 13 |\n\nThese units were calculated using prices as of 2026-11-18. Whether you can buy fractional units depends on your broker. If you can, a fractional-unit version would be a different, less constrained portfolio, and I can build it for you.\n\nTell me if you'd like to change any settings, and I'll rebuild the portfolio.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 13,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "None. Every number in the draft matches a tool-result field, and the exclusion, data-date, historical-versus-expected return, and no-guarantee disclosures are present."
+      },
+      "reviewed_at": "2026-11-26T22:33:26.042309+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "show_strategy",
+      "strategy": "S2",
+      "not_in_universe": []
+    },
+    {
+      "node": "switch_strategy",
+      "strategy": "S2"
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "No changes required. Every number in the draft matches a tool-result field, and the draft discloses the ETF screening scope, the model-based nature of the expected return, the volatility cap limitation, the test-period basis of the backtest figures, and the goal shortfall."
+      },
+      "reviewed_at": "2026-11-26T22:33:44.167241+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "compare_strategies",
+      "strategy": "S1",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "compare_strategies",
+      "tools": [
+        "strategy_comparison"
+      ]
+    },
+    {
+      "node": "router",
+      "intent": "other_question",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "other_question",
+      "tools": []
+    }
+  ],
+  "replies_total": 22,
+  "replies_with_numbers": 10,
+  "replies_with_invented": 0,
+  "numbers_total": 159,
+  "numbers_invented": 0,
+  "field_accuracy": {
+    "age": true,
+    "employment": true,
+    "num_dependants": true,
+    "income": true,
+    "invest_amount": true,
+    "other_assets": true,
+    "cash_needed_now": true,
+    "objective_str": true,
+    "target_yn": true,
+    "target": true,
+    "target_years": true,
+    "exp": true,
+    "rr_familiarity": true,
+    "desc": true,
+    "principal_protection": true,
+    "sectors": true
+  },
+  "holdings": {
+    "shown": true,
+    "strategy": "S2",
+    "exact": true,
+    "matching_positions": 8,
+    "expected_positions": 8,
+    "got": {
+      "VTI": 20,
+      "XIU.TO": 163,
+      "ZAG.TO": 505,
+      "AGG": 37,
+      "ACWV": 14,
+      "XESG.TO": 25,
+      "ICLN": 17,
+      "XRE.TO": 13
+    },
+    "expected": {
+      "XIU.TO": 163,
+      "XESG.TO": 25,
+      "ZAG.TO": 505,
+      "XRE.TO": 13,
+      "VTI": 20,
+      "ICLN": 17,
+      "AGG": 37,
+      "ACWV": 14
+    }
+  }
+}

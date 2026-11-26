@@ -1,0 +1,544 @@
+{
+  "id": "18",
+  "title": "Non-CAD currency (GBP)",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 72.5,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "target_years",
+    "exp",
+    "rr_familiarity",
+    "desc",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "25-34",
+    "employment": "employed",
+    "num_dependants": 0,
+    "income": "$80,000 \u2013 $99,999",
+    "invest_amount": 37360,
+    "other_assets": "$20,000 in emergency savings and $15,000 in other investments",
+    "cash_needed_now": 0,
+    "objective_str": "Buy a house",
+    "target_yn": "Yes",
+    "target": 50000,
+    "target_years": "4-10 years",
+    "exp": "some",
+    "rr_familiarity": "Yes",
+    "desc": "Moderate risk",
+    "principal_protection": "No",
+    "horizon_years": "4\u201310 years",
+    "sectors": "fossil fuel companies, AI companies"
+  },
+  "released_portfolio": true,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I want to invest \u00a320,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "All of our portfolios are in Canadian dollars (CAD), so I won't treat 20,000 GBP as CAD. Would you like me to convert it at the current GBP/CAD exchange rate, or would you rather tell me the amount in CAD?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 1,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "What's the exchange rate? Just use whatever it is today.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Using 1.868 CAD per 1 GBP (Yahoo Finance snapshot, 2026-11-26), 20,000 GBP is $37,360.00 CAD. Shall I use $37,360.00 as your investment amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 8,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, that's fine.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Great - I'll use $37,360.00 CAD.\n\nWhat is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 30.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I work full-time.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "None.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "About $85,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have $20,000 in emergency savings and $15,000 in other investments.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, none of it right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Saving for a down payment on a home.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$50,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "When will you need this money? (10+ years, 4\u201310 years, 1\u20133 years, 0\u20131 years)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "In about 5 years.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Some - I've invested a little before.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Which statement best describes you? (Very low risk / Low risk / Moderate risk / High risk)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Moderate risk is fine.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I'm okay with some ups and downs.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Please exclude fossil fuel companies and AI companies.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "## Your Recommended Portfolio\n\nBased on your answers (buying a house, a 4-10 year horizon, moderate risk), we recommend the **Strategy 2: Reverse optimization + Markowitz** portfolio. This is the tool's default recommendation for every client. It was chosen in advance by design, not by looking at the backtest. You did not select this strategy yourself.\n\n**How your answers set the limits**\n- Moderate risk sets a volatility cap of 10.0%. The optimizer keeps estimated volatility at or below this level. This limits risk but does not guarantee your principal, and the value can fall.\n- Fixed income must be at least 20.0%, and no single asset can exceed 30.0%.\n- No profile adjustments were needed.\n\n**Mix:** Equity 64.7%, Fixed Income 33.7%, Cash & fees 1.5%. The largest holdings are VTI (28.9%), XIU.TO (24.3%), and ZAG.TO (19.5%). The portfolio holds 8 assets.\n\n**Expected return:** The 6.3% annual figure is a model estimate from reverse optimization. It uses returns implied by the covariance matrix and a 60/40 reference portfolio. It is not a historical average or a promise. The model treats the 4-10 year range as 5 years: the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for you.\n\n**How the alternatives compare**\n- **Strategy 1** holds 5 assets. Its realized volatility in the test period was 12.3%, above your 10.0% cap.\n- **Equal weight** holds 18 assets. Its estimated volatility is 10.9%, above your cap, so it is shown only as a benchmark. It did better in this test, returning 9.8% in total.\n- **Our recommendation** returned 7.8% in total over the 7.6-month test period (2026-04-01 to 2026-11-18). That beats Strategy 1's 4.1% but trails the equal-weight benchmark. One short period does not show which approach will do better in the future.\n\n**Illustration for your goal:** Your $36,781.46 invested, growing at the model's 6.3% for 5 years, illustrates a value of $50,464.92 against your $50,000.00 target. This is only an illustration. Your $560.15 of uninvested cash is assumed to stay flat, and fees are already paid. In the held-out test, returns varied, so reaching the target is not assured and the value can end below it.\n\nPast performance does not guarantee future results.\n\n**About your exclusions (AI companies, fossil fuels):** I removed the individual tickers flagged in our data (AAPL, ENB.TO, GOOGL, MSFT, QQQ, XOM). This screen works at the ticker level only - the funds' underlying holdings were not checked, so the funds and diversified holdings in your portfolio (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) very likely still hold some of these companies - broad market funds own most large companies in their market. If that is not acceptable, tell me which ETFs to exclude as well and I will rebuild the portfolio.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 45,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "currency",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "currency",
+      "step": "ask"
+    },
+    {
+      "node": "router",
+      "intent": "currency",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "currency",
+      "step": "rate",
+      "currency": "GBP",
+      "amount": 20000.0,
+      "rate": 1.868,
+      "cad": 37360.0,
+      "source": "Yahoo Finance snapshot",
+      "date": "2026-11-26"
+    },
+    {
+      "node": "router",
+      "intent": "currency",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "currency",
+      "step": "confirmed",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "No changes required; the draft's figures match the tool results and the required disclosures are present."
+      },
+      "reviewed_at": "2026-11-26T22:40:10.397754+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    }
+  ],
+  "replies_total": 21,
+  "replies_with_numbers": 8,
+  "replies_with_invented": 0,
+  "numbers_total": 98,
+  "numbers_invented": 0
+}

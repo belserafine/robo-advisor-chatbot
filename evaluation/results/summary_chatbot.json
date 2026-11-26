@@ -1,0 +1,265 @@
+{
+  "version": "chatbot",
+  "model": "claude-haiku-5-5",
+  "run_at": "2026-11-26T17:41:23",
+  "scripts_run": 20,
+  "scripts_failed": [],
+  "field_accuracy": {
+    "correct": 140,
+    "total": 144,
+    "rate": 0.9722,
+    "per_field": {
+      "age": "9/9",
+      "employment": "9/9",
+      "num_dependants": "9/9",
+      "income": "7/9",
+      "invest_amount": "9/9",
+      "other_assets": "8/9",
+      "cash_needed_now": "9/9",
+      "objective_str": "9/9",
+      "target_yn": "9/9",
+      "target": "9/9",
+      "target_years": "9/9",
+      "exp": "9/9",
+      "rr_familiarity": "9/9",
+      "desc": "9/9",
+      "principal_protection": "8/9",
+      "sectors": "9/9"
+    }
+  },
+  "invented_numbers": {
+    "replies_total": 389,
+    "replies_with_numbers": 157,
+    "replies_with_invented": 0,
+    "numbers_total": 2131,
+    "numbers_invented": 0,
+    "reply_rate": 0.0,
+    "number_rate": 0.0
+  },
+  "holdings_vs_part3": {
+    "scripts": 9,
+    "shown": 7,
+    "exact": 4,
+    "positions_matching": "49/64"
+  },
+  "per_script": [
+    {
+      "id": "01",
+      "title": "Persona A - Strategy 1",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S1",
+      "replies_with_numbers": 12,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "16/16",
+      "holdings_exact": true
+    },
+    {
+      "id": "02",
+      "title": "Persona A - Strategy 2",
+      "final_phase": "failed",
+      "released_portfolio": false,
+      "strategy": "S2",
+      "replies_with_numbers": 4,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "15/16",
+      "holdings_exact": false
+    },
+    {
+      "id": "03",
+      "title": "Persona B - Strategy 1 (ESG)",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "16/16",
+      "holdings_exact": false
+    },
+    {
+      "id": "04",
+      "title": "Persona B - Strategy 2 (ESG)",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 10,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "16/16",
+      "holdings_exact": true
+    },
+    {
+      "id": "05",
+      "title": "Persona C - Strategy 1",
+      "final_phase": "failed",
+      "released_portfolio": false,
+      "strategy": "S2",
+      "replies_with_numbers": 4,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "15/16",
+      "holdings_exact": false
+    },
+    {
+      "id": "06",
+      "title": "Persona C - Strategy 2",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 10,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "15/16",
+      "holdings_exact": false
+    },
+    {
+      "id": "07",
+      "title": "Persona A - fractional vs whole units",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 9,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "16/16",
+      "holdings_exact": true
+    },
+    {
+      "id": "08",
+      "title": "Persona B - cost of ESG",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "16/16",
+      "holdings_exact": true
+    },
+    {
+      "id": "09",
+      "title": "Persona C - side-by-side",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 9,
+      "replies_with_invented": 0,
+      "numbers_invented": 0,
+      "field_accuracy": "15/16",
+      "holdings_exact": false
+    },
+    {
+      "id": "10",
+      "title": "Zero-risk / high-return contradiction",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "11",
+      "title": "Budget too small ($500)",
+      "final_phase": "failed",
+      "released_portfolio": false,
+      "strategy": "S2",
+      "replies_with_numbers": 7,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "12",
+      "title": "Contradictory risk answers",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "13",
+      "title": "Mid-conversation profile change",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S1",
+      "replies_with_numbers": 12,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "14",
+      "title": "Individual stock tip request",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "15",
+      "title": "Tax advice request",
+      "final_phase": "profiling",
+      "released_portfolio": false,
+      "strategy": "S2",
+      "replies_with_numbers": 3,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "16",
+      "title": "Behavioural coaching - panic",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 9,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "17",
+      "title": "Plain-language metrics",
+      "final_phase": "profiling",
+      "released_portfolio": false,
+      "strategy": "S2",
+      "replies_with_numbers": 4,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "18",
+      "title": "Non-CAD currency (GBP)",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 8,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "19",
+      "title": "COVID stress test",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 9,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    },
+    {
+      "id": "20",
+      "title": "Disclaimer",
+      "final_phase": "done",
+      "released_portfolio": true,
+      "strategy": "S2",
+      "replies_with_numbers": 7,
+      "replies_with_invented": 0,
+      "numbers_invented": 0
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "test": "Invented return",
+    "expected_code": "CLAIM_MISMATCH",
+    "detected": true,
+    "observed_codes": [
+      "CLAIM_MISMATCH"
+    ]
+  },
+  {
+    "test": "Wrong unit count",
+    "expected_code": "WEIGHT",
+    "detected": true,
+    "observed_codes": [
+      "WEIGHT",
+      "OVER_BUDGET",
+      "RECONCILIATION"
+    ]
+  },
+  {
+    "test": "Excluded asset",
+    "expected_code": "EXCLUDED",
+    "detected": true,
+    "observed_codes": [
+      "EXCLUDED"
+    ]
+  },
+  {
+    "test": "Budget exceeded",
+    "expected_code": "OVER_BUDGET",
+    "detected": true,
+    "observed_codes": [
+      "WEIGHT",
+      "OVER_BUDGET",
+      "RECONCILIATION",
+      "SECTOR_CAP"
+    ]
+  },
+  {
+    "test": "Missing disclaimer",
+    "expected_code": "DISCLAIMER",
+    "detected": true,
+    "observed_codes": [
+      "DISCLAIMER"
+    ]
+  },
+  {
+    "test": "Risk cap exceeded",
+    "expected_code": "VOLATILITY",
+    "detected": true,
+    "observed_codes": [
+      "VOLATILITY",
+      "CLAIM_MISMATCH"
+    ]
+  },
+  {
+    "test": "Missing horizon",
+    "expected_code": "MISSING_PROFILE",
+    "detected": true,
+    "observed_codes": [
+      "MISSING_PROFILE"
+    ]
+  },
+  {
+    "test": "Stale result",
+    "expected_code": "STALE_PROFILE",
+    "detected": true,
+    "observed_codes": [
+      "STALE_PROFILE"
+    ]
+  },
+  {
+    "test": "Insufficient reserve",
+    "expected_code": "LIQUIDITY",
+    "detected": true,
+    "observed_codes": [
+      "LIQUIDITY"
+    ]
+  },
+  {
+    "test": "Preservation conflict",
+    "expected_code": "PRESERVATION",
+    "detected": true,
+    "observed_codes": [
+      "PRESERVATION"
+    ]
+  },
+  {
+    "test": "Guarantee claim",
+    "expected_code": "GUARANTEE_LANGUAGE",
+    "detected": true,
+    "observed_codes": [
+      "GUARANTEE_LANGUAGE"
+    ]
+  }
+]

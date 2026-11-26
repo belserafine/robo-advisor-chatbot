@@ -1,0 +1,684 @@
+{
+  "id": "01",
+  "title": "Persona A - Strategy 1",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 122.5,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "num_dependants",
+    "income",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "target_years",
+    "rr_familiarity",
+    "desc",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "18-24",
+    "employment": "student",
+    "num_dependants": 0,
+    "income": "Under $20,000",
+    "invest_amount": 4000,
+    "other_assets": "About $2,000 in emergency savings",
+    "cash_needed_now": 0,
+    "objective_str": "General savings",
+    "target_yn": "Yes",
+    "target": 4000,
+    "target_years": "0-1 years",
+    "exp": "none",
+    "rr_familiarity": "Yes",
+    "desc": "Very low risk",
+    "principal_protection": "No",
+    "horizon_years": "0\u20131 years",
+    "sectors": "None"
+  },
+  "released_portfolio": true,
+  "strategy": "S1",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Hi, I'd like to invest some money.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Hi, and welcome! I can help you explore a diversified portfolio built from the 24 assets in my universe, which include Canadian and US stocks, ETFs, bonds, and gold.\n\nFirst, I'll ask a few quick questions about your situation so the portfolio fits your needs. Your answers stay private and only shape the analysis. Let's start with the next question below.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 22, a final-year undergrad with no job yet.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have $4,000 and I want to keep it safe for about a year \u2014 might need it for moving costs.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I know almost nothing about investing. No sector restrictions.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No dependants.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I earn less than $20k a year, basically nothing right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have about $2,000 in emergency savings.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I don't need any of it as cash right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Just general savings - I want to keep it safe.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I want to end up with at least my $4,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "When will you need this money? (10+ years, 4\u201310 years, 1\u20133 years, 0\u20131 years)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Within a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, I know higher returns come with higher risk.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Which statement best describes you? (Very low risk / Low risk / Moderate risk / High risk)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Very low risk - I can't afford to lose much.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, small ups and downs are okay, but keep it as safe as possible.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No sector restrictions.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "You said you want to end up with at least your $4,000 within a year, but you also said small ups and downs are okay and you don't need your original amount fully protected. Would you accept the possibility of ending up with less than $4,000, or do you need the full $4,000 protected even if that means lower returns?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 3,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, that's fine.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "## Your recommended portfolio\n\nYour answers set the limits for this portfolio. You chose \"Very low risk,\" and the closest setting in our model is \"low,\" which caps estimated volatility at **6.5%** and requires at least **50.0%** in fixed income. This is an approximation, not an exact match. The portfolio currently holds **31.6%** in stocks, which is its current share, not a limit. Your time horizon was modelled as **1 year**. The model uses this fixed value for the 0-1 year answer range, not the midpoint of the range or a figure chosen for you.\n\nWe show **Strategy 2: Reverse optimization + Markowitz** as the default recommendation for every client. You did not select it yourself. It estimates returns from market risk rather than past averages, which makes it less sensitive to noise in past data.\n\nIts expected annual return is **4.6%**, a model estimate and not a promise. The volatility cap limits risk but does not guarantee your money. The value can fall.\n\n**How it did in the backtest:** Over the 7.6-month test period (2026-04-01 to 2026-11-18), this strategy returned **4.7%** in total, with a maximum drawdown of **-2.5%**. Backtest returns are totals for that period, not annual rates. Both alternatives did better in this period. Strategy 1 returned **6.7%** in total, but its volatility of 6.7% was above your cap. The equal-weight benchmark returned **11.7%** in total, but its estimated volatility of 11.6% is far above your cap, so it is shown only for comparison. One short period does not show which will do better in the future.\n\n**Holdings:** The portfolio holds only 4 assets, so it is concentrated. The largest are AGG (34.2%), ZAG.TO (31.7%), and XIU.TO (27.4%).\n\n**Illustration:** Your $3,897.64 invested, growing at 4.6% for 1 year, would reach an illustrative **$4,176.91** against your **$4,000.00** target. This is only an illustration. Actual results will differ, and the target is not assured.\n\nNo profile adjustments were made. Past performance does not guarantee future results.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 34,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Show me Strategy 1 (Markowitz with historical returns).",
+      "phase_after": "clarify",
+      "replies": [
+        {
+          "content": "Sure - here is **Strategy 1: Markowitz with sample means** for your profile.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 1,
+          "invented": []
+        },
+        {
+          "content": "Before I show your recommendation, please confirm:\n\n- You chose **Very low risk**; the most conservative setting this model has is **Low** (volatility cap 6.5%), so that is what I used - the portfolio still holds 37.1% in stocks.\n\n- You asked for **Strategy 1: Markowitz with sample means**. In the test period it returned 6.7% in total, versus 4.7% for the default **Strategy 2: Reverse optimization + Markowitz**, and its volatility was above your 6.5% cap.\n\n- Your time horizon for this goal was calculated as exactly one year, the longest point in the 0-1 year range. If you need the money sooner, or your intended timeline is different, the projection may not match your situation.\n\nThe projected amount of $4,260.89 assumes a 6.7% expected annual return. It is an estimate, not a guaranteed result, and it is based on assumptions about how investments may perform.\n\nAre you OK to go ahead on this basis?\n\nReply *Yes, that's fine* to continue, tell me what to change, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, that's fine.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "## Your Recommended Portfolio\n\nYou asked for **Strategy 1: Markowitz with sample means**. The tool's default is **Strategy 2: Reverse optimization + Markowitz**, but we've shown your choice.\n\n**How your answers set the limits:** You chose \"Very low risk,\" and the closest available setting is \"low.\" That sets a volatility cap of 6.5% and a minimum of 50.0% in fixed income. This is the closest match, not an exact one. The portfolio holds 60.8% fixed income and 37.1% equity. Those are its current shares, not limits. No profile adjustments were made.\n\n**Holdings:** Your $3,914.01 is spread across 5 assets. The largest are iShares Core US Bond ETF (AGG, 30.7%), BMO Aggregate Bond ETF (ZAG.TO, 30.0%), and Royal Bank of Canada (RY.TO, 20.4%). With only five holdings, the portfolio is concentrated, so a drop in one holding can matter more.\n\n**Why this strategy and the alternatives:**\n- Strategy 2 holds 4 assets.\n- Strategy 1 holds 5 assets. Its realized volatility in the test period was 6.7%, above your 6.5% cap.\n- The equal-weight benchmark holds 24 assets and has an estimated volatility of 11.6%, above your cap. It is shown only as a benchmark. It did better in this test period, but one short period doesn't show which will do better in the future.\n\n**Backtest:** Over the 7.6-month test period (2026-04-01 to 2026-11-18), Strategy 1 returned 6.7% in total, not as an annual rate. Strategy 2 returned 4.7%, and the benchmark returned 11.7%. Strategy 1's maximum drawdown was -5.2%. Its realized volatility was above the cap, so actual volatility can be higher than the estimate.\n\n**Expected return and goal:** The expected annual return of 6.7% is a model estimate from historical average returns over the estimation window, not a promise. The volatility cap limits risk but does not guarantee your principal, and the value can fall. The model treats your horizon as: \"the 0-1 years range was modelled as 1 year - the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for this client.\"\n\nAs an illustration only, your $3,914.01 growing at 6.7% for 1 year reaches $4,260.89, above your $4,000.00 target. The $84.03 of uninvested cash is assumed to stay flat, and fees are already paid. In the test period, the annualized return was 10.6%, so reaching the target is not assured.\n\nPast performance does not guarantee future results.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 47,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Can you show me the exact units to buy?",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Here are the whole-unit holdings the model calculated for your $4,000.00 budget, with prices as of 2026-11-18:\n\n| Ticker | Name | Units | Price | Value |\n|---|---|---|---|---|\n| AGG | iShares Core US Bond ETF | 9 | $136.60 | $1,229.39 |\n| ZAG.TO | BMO Aggregate Bond ETF | 89 | $13.50 | $1,201.50 |\n| RY.TO | Royal Bank of Canada | 3 | $272.26 | $816.78 |\n| TD.TO | TD Bank | 2 | $165.82 | $331.64 |\n| ENB.TO | Enbridge | 5 | $66.94 | $334.70 |\n\nInvested: $3,914.01. Fees: $1.96. Uninvested cash: $84.03.\n\nA few things to keep in mind:\n- These are the model's outputs for this portfolio, not personal instructions. Prices change, so your actual fill prices will differ.\n- The units assume whole shares. If your broker supports fractional shares, the fractional optimum is a different, less constrained portfolio, so these figures wouldn't apply directly.\n- Before trading, consider checking with a CIRO-registered advisor. For the tax side of your account choice, a CPA or tax professional can help.\n\nYou can ask more about this portfolio, or tell me what has changed. Or click **Start over**.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 22,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "other_question",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "other_question"
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "No changes required. All reviewed figures match the trusted tool results, and the draft includes the required disclosures on expected versus historical returns, volatility cap limits, horizon modelling, risk-level mapping, and data date."
+      },
+      "reviewed_at": "2026-11-26T22:33:35.350940+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "show_strategy",
+      "strategy": "S1",
+      "not_in_universe": []
+    },
+    {
+      "node": "switch_strategy",
+      "strategy": "S1"
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S1",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "CLARIFY",
+      "passed": false,
+      "issues": [
+        "[CLARIFY] LLM_REVIEW: The client answered 'Very low risk', but the model's closest setting is 'low' (6.5% volatility cap). The draft discloses this mismatch, but the client has not confirmed that they accept it.; The selected Strategy 1 was outside the 6.5% volatility cap in its held-out test (realized 6.7%, within_vol_cap false). The draft discloses this, but the client has not confirmed they accept a strategy that breached the cap in testing.; The 0-1 year horizon was modelled as exactly 1 year, the top of the range. The client's intended horizon, and whether they need the money sooner, should be confirmed before the goal projection is relied on.; The draft's goal projection ($4,260.89 at the 6.7% expected return) is an illustration built on a model estimate. The client's acceptance of that basis should be confirmed."
+      ],
+      "issue_records": [
+        {
+          "code": "LLM_REVIEW",
+          "message": "The client answered 'Very low risk', but the model's closest setting is 'low' (6.5% volatility cap). The draft discloses this mismatch, but the client has not confirmed that they accept it.; The selected Strategy 1 was outside the 6.5% volatility cap in its held-out test (realized 6.7%, within_vol_cap false). The draft discloses this, but the client has not confirmed they accept a strategy that breached the cap in testing.; The 0-1 year horizon was modelled as exactly 1 year, the top of the range. The client's intended horizon, and whether they need the money sooner, should be confirmed before the goal projection is relied on.; The draft's goal projection ($4,260.89 at the 6.7% expected return) is an illustration built on a model estimate. The client's acceptance of that basis should be confirmed.",
+          "status": "CLARIFY"
+        }
+      ],
+      "llm_review": {
+        "status": "CLARIFY",
+        "issues": [
+          "The client answered 'Very low risk', but the model's closest setting is 'low' (6.5% volatility cap). The draft discloses this mismatch, but the client has not confirmed that they accept it.",
+          "The selected Strategy 1 was outside the 6.5% volatility cap in its held-out test (realized 6.7%, within_vol_cap false). The draft discloses this, but the client has not confirmed they accept a strategy that breached the cap in testing.",
+          "The 0-1 year horizon was modelled as exactly 1 year, the top of the range. The client's intended horizon, and whether they need the money sooner, should be confirmed before the goal projection is relied on.",
+          "The draft's goal projection ($4,260.89 at the 6.7% expected return) is an illustration built on a model estimate. The client's acceptance of that basis should be confirmed."
+        ],
+        "required_action": "Ask the client to confirm (1) acceptance of the 'low' risk mapping for a 'Very low risk' answer, (2) acceptance that the selected Strategy 1 exceeded the 6.5% cap in the held-out test, (3) their actual horizon within 0-1 years, and (4) that the $4,260.89 projection is for illustration only. Then regenerate the recommendation."
+      },
+      "reviewed_at": "2026-11-26T22:33:58.576996+00:00"
+    },
+    {
+      "node": "withhold",
+      "status": "CLARIFY",
+      "asked_client": true
+    },
+    {
+      "node": "clarify_answer",
+      "answer": "Yes, that's fine."
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "None. The draft's figures match the trusted tool results, the client confirmed the mapped risk level, the strategy choice and the projection basis, and the volatility-cap breach in testing is disclosed."
+      },
+      "reviewed_at": "2026-11-26T22:34:07.434079+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "other_question",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "other_question",
+      "tools": []
+    }
+  ],
+  "replies_total": 25,
+  "replies_with_numbers": 12,
+  "replies_with_invented": 0,
+  "numbers_total": 164,
+  "numbers_invented": 0,
+  "field_accuracy": {
+    "age": true,
+    "employment": true,
+    "num_dependants": true,
+    "income": true,
+    "invest_amount": true,
+    "other_assets": true,
+    "cash_needed_now": true,
+    "objective_str": true,
+    "target_yn": true,
+    "target": true,
+    "target_years": true,
+    "exp": true,
+    "rr_familiarity": true,
+    "desc": true,
+    "principal_protection": true,
+    "sectors": true
+  },
+  "holdings": {
+    "shown": true,
+    "strategy": "S1",
+    "exact": true,
+    "matching_positions": 5,
+    "expected_positions": 5,
+    "got": {
+      "AGG": 9,
+      "ZAG.TO": 89,
+      "RY.TO": 3,
+      "TD.TO": 2,
+      "ENB.TO": 5
+    },
+    "expected": {
+      "RY.TO": 3,
+      "TD.TO": 2,
+      "ENB.TO": 5,
+      "ZAG.TO": 89,
+      "AGG": 9
+    }
+  }
+}

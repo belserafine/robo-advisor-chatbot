@@ -1,0 +1,714 @@
+{
+  "id": "16",
+  "title": "Behavioural coaching - panic",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 119.8,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "invest_amount",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "target_years",
+    "exp",
+    "rr_familiarity",
+    "desc",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "25-34",
+    "employment": "employed",
+    "num_dependants": 0,
+    "income": "$80,000 \u2013 $99,999",
+    "invest_amount": 35000,
+    "other_assets": "$20,000 in emergency savings and $15,000 in other investments",
+    "cash_needed_now": 0,
+    "objective_str": "Buy a house",
+    "target_yn": "Yes",
+    "target": 50000,
+    "target_years": "4-10 years",
+    "exp": "some",
+    "rr_familiarity": "Yes",
+    "desc": "Moderate risk",
+    "principal_protection": "No",
+    "horizon_years": "4\u201310 years",
+    "sectors": "fossil fuel companies, AI companies"
+  },
+  "released_portfolio": true,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 30.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I work full-time.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "None.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "About $85,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is the amount you're looking to invest today?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$35,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have $20,000 in emergency savings and $15,000 in other investments.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, none of it right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Saving for a down payment on a home.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$50,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "When will you need this money? (10+ years, 4\u201310 years, 1\u20133 years, 0\u20131 years)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "In about 5 years.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Some - I've invested a little before.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Which statement best describes you? (Very low risk / Low risk / Moderate risk / High risk)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Moderate risk is fine.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I'm okay with some ups and downs.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Please exclude fossil fuel companies and AI companies.",
+      "phase_after": "clarify",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "Before I show your recommendation, please confirm:\n\n- At the model's expected return the illustration is $47,413.23, below your $50,000.00 target, so reaching it is not assured.\n\n- Your exclusions remove the individual companies we flag, but broad funds in your portfolio very likely still hold some of them (see the note under the recommendation).\n\n- The 12.4% annualized backtest figure is based on a short period of about 7.6 months. It describes how the portfolio would have performed in the past. It is not a forecast of what you will earn. We have shown it prominently, so please take a moment to make sure you understand what it does and does not mean before relying on it.\n\nAre you OK to go ahead on this basis?\n\nReply *Yes, that's fine* to continue, tell me what to change, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 4,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, that's fine.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "## Your recommended portfolio\n\nYour answers set two limits: a **volatility cap of 10.0%** and a **minimum of 20.0% in fixed income**. The portfolio holds 33.9% fixed income, within that limit. No profile adjustments were applied.\n\nWe show **Strategy 2: Reverse optimization + Markowitz**. You did not select it. It is the tool's default recommendation for every client, chosen by design before any backtest. Its expected returns are implied by market risk rather than historical averages, which makes it less sensitive to noise in past returns. It holds 8 assets. The largest positions are VTI (29.4%), XIU.TO (24.3%), and ZAG.TO (19.5%).\n\n**Asset mix:** Equity 65.6%, Fixed Income 33.9%, Cash & fees 0.5%.\n\n**Expected return (model estimate):** The expected annual return is 6.3%, with estimated volatility of 10.0%. This is a model estimate from reverse optimization (returns implied by the covariance matrix and a 60/40 reference portfolio), not a historical average and not a promise. The volatility cap limits risk but does not guarantee your principal, and the value can fall.\n\n**Historical backtest (not a forecast):** Over the 7.6-month test period (2026-04-01 to 2026-11-18), the total return was 7.9%. The 12.4% annualized figure is historical and was annualized from this short window. It is not a forecast. The maximum drawdown was -3.1%.\n\n**Alternatives:** The equal-weight benchmark did better in this period, with a 9.8% total return. However, its estimated volatility of 10.9% is above your cap, so it is shown only as a benchmark. Strategy 1 returned 4.0% in total, with realized volatility of 12.2%, also above your cap.\n\n**Goal check (illustration only):** Your $34,840.11 invested, growing at the 6.3% expected return for 5 years, would illustratively reach $47,413.23. That falls short of your $50,000.00 house target, so it does not reach the target at the expected return. Test-period returns varied, so reaching the target is not assured.\n\n**The horizon** was modelled as \"5 years - the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for this client.\"\n\n**Please confirm:** Do you accept this projected shortfall? Or would you like to revisit your target, timeline, or contributions? I can rebuild the portfolio around whichever you choose.\n\nPast performance does not guarantee future results.\n\n**About your exclusions (AI companies, fossil fuels):** I removed the individual tickers flagged in our data (AAPL, ENB.TO, GOOGL, MSFT, QQQ, XOM). This screen works at the ticker level only - the funds' underlying holdings were not checked, so the funds and diversified holdings in your portfolio (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) very likely still hold some of these companies - broad market funds own most large companies in their market. If that is not acceptable, tell me which ETFs to exclude as well and I will rebuild the portfolio.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 39,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "The market just dropped 15%! I want to sell everything right now!",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "I understand that a drop like this is alarming, and wanting to act right away is a natural reaction. Before you do anything, has your situation or your goal changed? For example, do you need this money sooner than planned?\n\nSelling after a drop turns a temporary fall in value into a realized loss, and you may miss the recovery if markets rebound. I don't have today's market figures, so I can't say how your portfolio is affected right now.\n\nFor context, in our 2022 stress test (3 Jan to 17 Oct 2022), the recommended portfolio returned **-12.3%** in total, with a maximum drawdown of **-15.4%**, a result of **$-4,294.30** on your budget. It took **78** weeks to recover. Bonds did not cushion that year: ZAG.TO returned **-15.1%** and AGG **-9.7%**. This uses past data and is not a prediction.\n\nWould you like me to run the stress test again or walk you through your options? If your circumstances have changed, tell me what changed (for example, \"change my risk to low\") and I'll rebuild your portfolio.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": {
+            "title": "Historical risk metrics",
+            "items": [
+              [
+                "2022 sell-off: worst fall",
+                "-15.4%"
+              ],
+              [
+                "Maximum drawdown",
+                "-3.1%"
+              ],
+              [
+                "Volatility",
+                "8.9%"
+              ],
+              [
+                "Volatility limit",
+                "10.0%"
+              ]
+            ],
+            "note": "Backtest 2026-04-01 to 2026-11-18. Past performance does not guarantee future results."
+          },
+          "numbers": 10,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Nothing has changed, I'm just scared.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "It's completely understandable to feel scared when markets fall. Since your goal and timeline haven't changed, I'd encourage you to pause before selling. Selling after a drop turns a temporary fall in value into a realized loss, and you could miss part of any recovery.\n\nOur 2022 stress test shows how rough a period can get for this portfolio:\n\n- **Total return:** -12.3%\n- **Maximum drawdown:** -15.4%\n- **Weeks to recover:** 78\n- **Bonds didn't cushion that year:** ZAG.TO returned -15.1% and AGG -9.7%\n\nThis is past data, not a prediction. It does show that losses can be sizeable and last a long time. If that level of drop would be too hard to live with, tell me what's changed, such as \"change my risk to low,\" and I'll rebuild the portfolio.\n\nSome options:\n- **Re-run the 2022 stress test** to look at the numbers again.\n- **Talk to a CIRO-registered advisor or financial planner** about how much volatility you're comfortable with.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": {
+            "title": "Historical risk metrics",
+            "items": [
+              [
+                "2022 sell-off: worst fall",
+                "-15.4%"
+              ],
+              [
+                "Maximum drawdown",
+                "-3.1%"
+              ],
+              [
+                "Volatility",
+                "8.9%"
+              ],
+              [
+                "Volatility limit",
+                "10.0%"
+              ]
+            ],
+            "note": "Backtest 2026-04-01 to 2026-11-18. Past performance does not guarantee future results."
+          },
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "OK, I'll stay invested. But what if it drops another 20%?",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Staying invested is a decision you can revisit at any time, and it's worth thinking through the \"what if.\"\n\nI don't have a figure for a 20% drop, so I can't say what it would mean for your portfolio. The worst result in our 2022 stress test was a maximum drawdown of **-15.4%** for the recommended portfolio, and the **-15.8%** re-estimated version was slightly worse. A 20% fall would be larger than either. The stress test also took **78** weeks to recover. Our data starts in April 2021, so it doesn't include COVID-19 in 2020, which was another sharp downturn.\n\nTo help you prepare:\n\n- **Ask yourself** whether you could hold through a fall of that size for a long time without needing the money.\n- **Re-run the 2022 stress test** to see the numbers again.\n- **Talk to a CIRO-registered advisor or financial planner** about how much loss you can tolerate.\n- **Tell me what's changed** (for example, \"change my risk to low\") if you'd prefer a portfolio with smaller swings, and I'll rebuild it.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": {
+            "title": "Historical risk metrics",
+            "items": [
+              [
+                "2022 sell-off: worst fall",
+                "-15.4%"
+              ],
+              [
+                "Maximum drawdown",
+                "-3.1%"
+              ],
+              [
+                "Volatility",
+                "8.9%"
+              ],
+              [
+                "Volatility limit",
+                "10.0%"
+              ]
+            ],
+            "note": "Backtest 2026-04-01 to 2026-11-18. Past performance does not guarantee future results."
+          },
+          "numbers": 10,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "REVISE",
+      "passed": false,
+      "issues": [
+        "[REVISE] LLM_REVIEW: The draft presents a 12.4% annualized return from the 7.6-month test period without stating that it was annualized from a short window. The tool's disclosure says the backtest figure is a total return over the whole period, not an annual rate, so the annualized figure is historical and should be labelled as such.; The goal check shows the $34,840.11 invested reaching about $47,413.23 against a $50,000.00 house target, a shortfall at the expected return. The draft does not ask the client to confirm they accept this shortfall or want to revisit the target or contributions, so the goal-versus-risk tension is unresolved.; The draft says the recommendation 'did worse in this period' versus the benchmark, but the 12.4% annualized figure sits beside the goal check, which could read as more optimistic than the 6.3% model estimate. The historical and expected figures need clearer separation."
+      ],
+      "issue_records": [
+        {
+          "code": "LLM_REVIEW",
+          "message": "The draft presents a 12.4% annualized return from the 7.6-month test period without stating that it was annualized from a short window. The tool's disclosure says the backtest figure is a total return over the whole period, not an annual rate, so the annualized figure is historical and should be labelled as such.; The goal check shows the $34,840.11 invested reaching about $47,413.23 against a $50,000.00 house target, a shortfall at the expected return. The draft does not ask the client to confirm they accept this shortfall or want to revisit the target or contributions, so the goal-versus-risk tension is unresolved.; The draft says the recommendation 'did worse in this period' versus the benchmark, but the 12.4% annualized figure sits beside the goal check, which could read as more optimistic than the 6.3% model estimate. The historical and expected figures need clearer separation.",
+          "status": "REVISE"
+        }
+      ],
+      "llm_review": {
+        "status": "REVISE",
+        "issues": [
+          "The draft presents a 12.4% annualized return from the 7.6-month test period without stating that it was annualized from a short window. The tool's disclosure says the backtest figure is a total return over the whole period, not an annual rate, so the annualized figure is historical and should be labelled as such.",
+          "The goal check shows the $34,840.11 invested reaching about $47,413.23 against a $50,000.00 house target, a shortfall at the expected return. The draft does not ask the client to confirm they accept this shortfall or want to revisit the target or contributions, so the goal-versus-risk tension is unresolved.",
+          "The draft says the recommendation 'did worse in this period' versus the benchmark, but the 12.4% annualized figure sits beside the goal check, which could read as more optimistic than the 6.3% model estimate. The historical and expected figures need clearer separation."
+        ],
+        "required_action": "Revise the draft to label the 12.4% as an annualized figure from the 7.6-month test window, state that it is historical and not a forecast, and keep the 6.3% expected return clearly separate. Add a note that the projection falls short of the $50,000 target, and ask the client to confirm they accept this or want to revisit the target, timeline, or contributions before proceeding."
+      },
+      "reviewed_at": "2026-11-26T22:39:10.236094+00:00"
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 1,
+      "used_feedback": true
+    },
+    {
+      "node": "compliance",
+      "attempt": 1,
+      "status": "CLARIFY",
+      "passed": false,
+      "issues": [
+        "[CLARIFY] LLM_REVIEW: The recommended portfolio's illustrative projection ($47,413.23 at 6.3% over 5 years) falls short of the client's $50,000 house target, and the client has not yet confirmed whether to accept this shortfall or revise the target, timeline, or contributions.; The client's stated target timeline is 4-10 years, but the model applies a fixed 5-year horizon. The draft discloses this, but the client has not confirmed that 5 years is acceptable for the goal.; The exclusion screen is ticker-level only. Broad ETFs (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) may still hold excluded AI and fossil-fuel companies, and the client has not confirmed whether that is acceptable.; The 12.4% annualized backtest figure comes from a 7.6-month window. The draft labels it historical and not a forecast, but it is placed prominently and the client should confirm they understand it."
+      ],
+      "issue_records": [
+        {
+          "code": "LLM_REVIEW",
+          "message": "The recommended portfolio's illustrative projection ($47,413.23 at 6.3% over 5 years) falls short of the client's $50,000 house target, and the client has not yet confirmed whether to accept this shortfall or revise the target, timeline, or contributions.; The client's stated target timeline is 4-10 years, but the model applies a fixed 5-year horizon. The draft discloses this, but the client has not confirmed that 5 years is acceptable for the goal.; The exclusion screen is ticker-level only. Broad ETFs (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) may still hold excluded AI and fossil-fuel companies, and the client has not confirmed whether that is acceptable.; The 12.4% annualized backtest figure comes from a 7.6-month window. The draft labels it historical and not a forecast, but it is placed prominently and the client should confirm they understand it.",
+          "status": "CLARIFY"
+        }
+      ],
+      "llm_review": {
+        "status": "CLARIFY",
+        "issues": [
+          "The recommended portfolio's illustrative projection ($47,413.23 at 6.3% over 5 years) falls short of the client's $50,000 house target, and the client has not yet confirmed whether to accept this shortfall or revise the target, timeline, or contributions.",
+          "The client's stated target timeline is 4-10 years, but the model applies a fixed 5-year horizon. The draft discloses this, but the client has not confirmed that 5 years is acceptable for the goal.",
+          "The exclusion screen is ticker-level only. Broad ETFs (VTI, XIU.TO, ZAG.TO, AGG, ACWV, XESG.TO, ICLN, XRE.TO) may still hold excluded AI and fossil-fuel companies, and the client has not confirmed whether that is acceptable.",
+          "The 12.4% annualized backtest figure comes from a 7.6-month window. The draft labels it historical and not a forecast, but it is placed prominently and the client should confirm they understand it."
+        ],
+        "required_action": "Before presenting this as final, ask the client to confirm whether they accept the projected $2,587 shortfall against the $50,000 target at the 5-year model horizon and the ticker-level exclusion scope, or to revise their target, timeline, contributions, or exclusions. Only rebuild or finalize the recommendation after that confirmation, and keep all figures tied to the tool results."
+      },
+      "reviewed_at": "2026-11-26T22:39:30.484606+00:00"
+    },
+    {
+      "node": "withhold",
+      "status": "CLARIFY",
+      "asked_client": true
+    },
+    {
+      "node": "clarify_answer",
+      "answer": "Yes, that's fine."
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "None required."
+      },
+      "reviewed_at": "2026-11-26T22:39:37.833320+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "emotional",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "emotional",
+      "tools": [
+        "stress_test_2022"
+      ]
+    },
+    {
+      "node": "router",
+      "intent": "emotional",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "emotional",
+      "tools": [
+        "stress_test_2022"
+      ]
+    },
+    {
+      "node": "router",
+      "intent": "emotional",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "emotional",
+      "tools": [
+        "stress_test_2022"
+      ]
+    }
+  ],
+  "replies_total": 23,
+  "replies_with_numbers": 9,
+  "replies_with_invented": 0,
+  "numbers_total": 102,
+  "numbers_invented": 0
+}

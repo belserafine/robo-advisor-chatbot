@@ -1,0 +1,138 @@
+{
+  "id": "17",
+  "title": "Plain-language metrics",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 23.8,
+  "final_phase": "profiling",
+  "fields_filled_by_persona_card": [],
+  "answers": {
+    "age": null,
+    "employment": null,
+    "num_dependants": null,
+    "income": null,
+    "invest_amount": null,
+    "other_assets": null,
+    "cash_needed_now": null,
+    "objective_str": null,
+    "target_yn": null,
+    "target": null,
+    "target_years": null,
+    "exp": null,
+    "rr_familiarity": null,
+    "desc": null,
+    "principal_protection": null,
+    "horizon_years": null,
+    "sectors": null
+  },
+  "released_portfolio": false,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "What is a Sharpe ratio? I keep seeing it but I don't understand it.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "A **Sharpe ratio** measures how much return an investment earned for each unit of risk it took. It compares the return above a \"risk-free\" rate (here, **2.30%**) with the investment's volatility, which is how much its price swings.\n\n- **Higher is generally better.** It means more return for the bumpiness you accepted.\n- **Below zero** means the investment returned less than the risk-free rate over the period.\n\nSome examples from our historical data (2021 to 2026):\n\n- **GLD (SPDR Gold Shares): 1.11**\n- **RY.TO (Royal Bank of Canada): 1.02**\n- **ICLN (iShares Global Clean Energy ETF): -0.15**\n\nA Sharpe ratio is backward-looking. It describes past performance and doesn't predict future results, so it's one input among several.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 17,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "What about volatility and max drawdown?",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "**Volatility** measures how much an investment's price swings up and down. A higher number means a bumpier ride.\n\n**Max drawdown** is the largest drop from a peak to a low point during the period. It shows how bad the worst losing stretch was.\n\nExamples from our historical data (April 2021 to March 2026):\n\n- **RY.TO (Royal Bank of Canada):** volatility 14.37%, max drawdown -20.66%\n- **GLD (SPDR Gold Shares):** volatility 17.50%, max drawdown -14.15%\n- **AGG (iShares Core US Bond ETF):** volatility 8.15%, max drawdown -13.13%\n- **ICLN (iShares Global Clean Energy ETF):** volatility 25.94%, max drawdown -47.16%\n\nKeep in mind:\n- Lower volatility usually means smaller swings, but it doesn't rule out large losses.\n- Max drawdown describes the past. A future drop could be larger.\n- Higher potential returns generally come with higher risk.\n\nOur data doesn't include the COVID-19 period of 2020. If you'd like, I can run a stress test on a portfolio using 2022 market conditions to see how it might have held up.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 24,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Which metric should I care about most?",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "No single metric is \"best.\" Each answers a different question, so it depends on what matters most to you:\n\n- **Max drawdown** shows the worst losing stretch in the past. If you'd struggle to watch your money fall sharply, this one matters most. For example, RY.TO (Royal Bank of Canada) had a max drawdown of **-20.66%**, while GLD (SPDR Gold Shares) had **-14.15%**.\n- **Volatility** shows how bumpy the ride usually is. RY.TO had volatility of **14.37%**, and GLD had **17.50%**.\n- **Sharpe ratio** balances return against risk. It helps you compare how much return each unit of risk earned, but it doesn't tell you how deep the losses went.\n\nIf you tell me whether a smoother ride or a higher potential return matters more to you, I can factor that in once we finish the questions.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 15,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "metric_or_asset_info",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "metric_or_asset_info"
+    },
+    {
+      "node": "router",
+      "intent": "metric_or_asset_info",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "metric_or_asset_info"
+    },
+    {
+      "node": "router",
+      "intent": "metric_or_asset_info",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "metric_or_asset_info"
+    }
+  ],
+  "replies_total": 4,
+  "replies_with_numbers": 4,
+  "replies_with_invented": 0,
+  "numbers_total": 67,
+  "numbers_invented": 0
+}

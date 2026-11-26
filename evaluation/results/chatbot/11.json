@@ -1,0 +1,490 @@
+{
+  "id": "11",
+  "title": "Budget too small ($500)",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 65.6,
+  "final_phase": "failed",
+  "fields_filled_by_persona_card": [
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "target_years",
+    "exp",
+    "rr_familiarity",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "18-24",
+    "employment": "student",
+    "num_dependants": 0,
+    "income": "Under $20,000",
+    "invest_amount": 500,
+    "other_assets": "About $2,000 in emergency savings",
+    "cash_needed_now": 0,
+    "objective_str": "General savings",
+    "target_yn": "Yes",
+    "target": 500,
+    "target_years": "0-1 years",
+    "exp": "none",
+    "rr_familiarity": "Yes",
+    "desc": "Low risk",
+    "principal_protection": "No",
+    "horizon_years": "0\u20131 years",
+    "sectors": "none"
+  },
+  "released_portfolio": false,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I want to invest $500.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "1 year, low risk.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 22.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm a full-time student in my final year, no job yet.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No dependants.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I earn less than $20k a year, basically nothing right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have about $2,000 in emergency savings.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I don't need any of it as cash right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Just general savings - I want to keep it safe.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'd like to keep my $500.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "When will you need this money? (10+ years, 4\u201310 years, 1\u20133 years, 0\u20131 years)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Within a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I know almost nothing about investing.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes, I know higher returns come with higher risk.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, small ups and downs are okay, but keep it as safe as possible.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No sector restrictions.",
+      "phase_after": "failed",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "I couldn't build a whole-unit portfolio from these answers: no portfolio satisfies your constraints. The budget may be too small to buy whole units of a diversified portfolio, or too many assets are excluded.\n\nWith $500, some assets cost more than your whole budget for one unit: SPY ($1,044.12), QQQ ($943.04), BRK-B ($821.65), MSFT ($726.81), VTI ($514.02), AAPL ($503.97).\n\nWith the same answers, a whole-unit portfolio works from about $1,250 (checked in $250 steps).\n\nOptions: invest a larger amount, or use a broker that allows fractional units - ask me *\"show me a fractional portfolio\"* to see it. You can also click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 9,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "What can I actually buy?",
+      "phase_after": "failed",
+      "replies": [
+        {
+          "content": "With $500 and whole units only, I can't build a complete diversified portfolio. Six assets cost more than your whole budget for one unit:\n\n- **SPY** (SPDR S&P 500 ETF): $1,044.12\n- **QQQ** (Invesco Nasdaq-100 ETF): $943.04\n- **BRK-B** (Berkshire Hathaway B): $821.65\n- **MSFT** (Microsoft): $726.81\n- **VTI** (Vanguard Total Market ETF): $514.02\n- **AAPL** (Apple): $503.97\n\nWhole units work from about **$1,250**, checked in $250 steps.\n\nYou have two main options:\n\n1. **Invest a larger amount**, around $1,250 or more.\n2. **Use a broker that allows fractional units.** Fractional units let you buy part of a share or ETF. With $500, the fractional version holds 13 assets, with the largest weight in ZAG.TO (BMO Aggregate Bond ETF) at 40.0%. Fractional trading depends on your broker, so please check that first.\n\nWould you like me to show the fractional portfolio? Or you can click **Start over** to change your budget.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 17,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "error": "no portfolio satisfies your constraints. The budget may be too small to buy whole units of a diversified portfolio, or too many assets are excluded"
+    },
+    {
+      "node": "router",
+      "intent": "small_budget",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "small_budget",
+      "tools": [
+        "fractional_portfolio",
+        "budget_diagnostics"
+      ]
+    }
+  ],
+  "replies_total": 19,
+  "replies_with_numbers": 7,
+  "replies_with_invented": 0,
+  "numbers_total": 78,
+  "numbers_invented": 0
+}

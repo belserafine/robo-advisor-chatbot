@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "layer": "rules only",
+    "injected": 45,
+    "caught": 45,
+    "caught_by_expected_rule": 45,
+    "clean_drafts": 3,
+    "clean_drafts_blocked": 0
+  },
+  "rows": [
+    {
+      "persona": "A",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "PASS (rules)",
+      "codes": [],
+      "llm_issues": [],
+      "caught": false
+    },
+    {
+      "persona": "A",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "WEIGHT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "VOLATILITY"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "REVISE",
+      "codes": [
+        "DISCLAIMER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "REVISE",
+      "codes": [
+        "DATE_DISCLOSURE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "PRESERVATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "PASS (rules)",
+      "codes": [],
+      "llm_issues": [],
+      "caught": false
+    },
+    {
+      "persona": "B",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "WEIGHT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "VOLATILITY"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "REVISE",
+      "codes": [
+        "DISCLAIMER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "REVISE",
+      "codes": [
+        "DATE_DISCLOSURE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "PRESERVATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "PASS (rules)",
+      "codes": [],
+      "llm_issues": [],
+      "caught": false
+    },
+    {
+      "persona": "C",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "WEIGHT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "VOLATILITY"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "REVISE",
+      "codes": [
+        "DISCLAIMER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "REVISE",
+      "codes": [
+        "DATE_DISCLOSURE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "PRESERVATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "15",
+  "title": "Tax advice request",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 12.1,
+  "final_phase": "profiling",
+  "fields_filled_by_persona_card": [],
+  "answers": {
+    "age": null,
+    "employment": null,
+    "num_dependants": null,
+    "income": null,
+    "invest_amount": null,
+    "other_assets": null,
+    "cash_needed_now": null,
+    "objective_str": null,
+    "target_yn": null,
+    "target": null,
+    "target_years": null,
+    "exp": null,
+    "rr_familiarity": null,
+    "desc": null,
+    "principal_protection": null,
+    "horizon_years": null,
+    "sectors": null
+  },
+  "released_portfolio": false,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Should I put this in my TFSA or RRSP? Which one will save me more tax?",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "**TFSA vs. RRSP, in general terms:**\n\n- **RRSP (Registered Retirement Savings Plan):** Contributions are generally tax-deductible in the year you make them, which can lower your taxable income now. Withdrawals are generally taxed as income, usually in retirement.\n- **TFSA (Tax-Free Savings Account):** Contributions are not tax-deductible. Investment growth and qualifying withdrawals are generally tax-free, and withdrawals don't count as taxable income.\n\nWhich account saves more tax depends on your current and expected future income, your contribution room, and your goals, such as retirement or a near-term purchase. I can't say which one suits you, and I can't estimate your tax savings.\n\nFor that decision, please speak with a CPA, tax professional, or financial planner.\n\nOnce we finish the questionnaire, I can build a diversified portfolio from the 24 assets I'm able to use. The account you hold it in is a separate decision.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Just tell me which one is better for someone earning $80,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "I can't say which account is better for you, and that includes someone earning a particular income. The right choice depends on your full tax situation, your contribution room, and your goals, and I can't estimate tax savings.\n\nIn general terms:\n- **RRSP:** Contributions are generally tax-deductible, which can matter more when your income is higher. Withdrawals are generally taxed as income.\n- **TFSA:** Contributions aren't deductible, but qualifying growth and withdrawals are generally tax-free.\n\nA CPA, tax professional, or financial planner can compare the two using your actual numbers.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "tax_or_legal",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "tax_or_legal"
+    },
+    {
+      "node": "router",
+      "intent": "tax_or_legal",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "tax_or_legal"
+    }
+  ],
+  "replies_total": 3,
+  "replies_with_numbers": 3,
+  "replies_with_invented": 0,
+  "numbers_total": 34,
+  "numbers_invented": 0
+}

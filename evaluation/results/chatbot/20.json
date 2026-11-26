@@ -1,0 +1,491 @@
+{
+  "id": "20",
+  "title": "Disclaimer",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 73.2,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "exp",
+    "rr_familiarity",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "25-34",
+    "employment": "employed",
+    "num_dependants": 0,
+    "income": "$80,000 \u2013 $99,999",
+    "invest_amount": 35000,
+    "other_assets": "$20,000 in emergency savings and $15,000 in other investments",
+    "cash_needed_now": 0,
+    "objective_str": "Buy a house",
+    "target_yn": "Yes",
+    "target": 50000,
+    "target_years": "4-10 years",
+    "exp": "some",
+    "rr_familiarity": "Yes",
+    "desc": "Moderate risk",
+    "principal_protection": "No",
+    "horizon_years": "4\u201310 years",
+    "sectors": "No restrictions"
+  },
+  "released_portfolio": true,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Build me a balanced portfolio \u2014 $35,000, 5 years, moderate risk.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 30.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I work full-time.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "None.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "About $85,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I have $20,000 in emergency savings and $15,000 in other investments.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, none of it right now.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Saving for a down payment on a home.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$50,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Some - I've invested a little before.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No, I'm okay with some ups and downs.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No restrictions.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "## Your Recommended Portfolio\n\n**How your answers shaped it:** Your moderate risk tolerance set a **volatility cap of 10.0%** (the optimizer keeps estimated volatility at or below this) and a **minimum of 20.0% in fixed income**. The portfolio ended up at 61.0% equity, 37.3% fixed income, and 1.7% cash and fees. Your 4-10 year horizon was modelled as 5 years, the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for you. No profile adjustments were made.\n\n**Why this strategy:** Strategy 2 (Reverse optimization + Markowitz) is this tool's default for every client, chosen in advance by design rather than by looking at the backtest. It estimates expected returns from market risk instead of historical averages. It holds 9 assets. The largest holdings are VTI (29.4%), XIU.TO (25.8%), and ZAG.TO (22.5%).\n\n**Alternatives:**\n- **Strategy 1** holds 6 assets, and its realized volatility in the test period was 10.04%, above your cap.\n- **Equal weight benchmark** holds 24 assets, with estimated volatility of 11.6%, above your cap. It is shown only for comparison. It did better in the test period (11.7% total), but one short period doesn't predict the future.\n\n**Expected return and backtest:** The expected annual return of 6.3% is a model estimate from reverse optimization. It is not a historical average or a promise. The volatility cap limits risk but does not guarantee your money; the value can fall. In the 7.6-month held-out test, the recommended strategy returned 7.9% in total, with a maximum drawdown of -3.1%. Backtest returns are totals for the test period, not annual rates. This was lower than the benchmark's result.\n\n**Illustrative goal projection:** Your $34,420.45 invested, growing at 6.3% for 5 years, reaches an illustrative $47,277.34, which is below your $50,000.00 target. The $562.34 of cash is assumed to stay flat. This is an illustration only. In the test period, the annualized return was 12.5%, but returns vary, so the target is not assured.\n\nPast performance does not guarantee future results.\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 33,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Where does it say this is not financial advice?",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "The disclaimer appears at the end of your portfolio summary, in the note under the prices. It says:\n\n> ****\n\nThe portfolio is an educational illustration. It is built from historical data (April 2021 to March 2026) and an optimization model. It isn't a recommendation to buy or sell anything, and I can't tell you whether it's a good investment. The expected return is a model estimate, not a promise, and the value of your investments can fall.\n\nIf you want personalized advice, a CIRO-registered advisor or a financial planner can review your full situation. You can also ask me about any part of this portfolio, or click **Start over** to change your settings.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I acknowledge the disclaimer. Now can you just tell me if this is a good investment?",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "I can't tell you whether this is a good investment, and no investment can be guaranteed to perform well. Here is the disclaimer from my data:\n\n>Some points to keep in mind:\n\n- **Educational illustration:** It's built from weekly prices (April 2021 to March 2026) and an optimization model.\n- **Expected return:** The 6.3% is a model estimate, not a promise.\n- **Risk:** The 10.0% volatility cap limits risk but doesn't protect your money. The value can fall.\n- **Test period:** In the 7.6-month held-out test, the strategy returned 7.9% in total, with a maximum drawdown of -3.1%. The data doesn't cover 2020.\n- **Your goal:** At the expected return, the illustrative value after 5 years is $47,277.34, below your $50,000.00 target.\n\nWhether this suits you depends on your goals, timeline, and comfort with risk. A CIRO-registered advisor or financial planner can review your full situation.\n\nI also need to correct my earlier reply: the disclaimer quote I showed you was blank. The full text is above.\n\n_For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "No changes required. All checked figures match the trusted tool results and the confirmed profile, and the draft discloses the goal shortfall and the non-guaranteed nature of the returns."
+      },
+      "reviewed_at": "2026-11-26T22:41:05.535109+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    },
+    {
+      "node": "router",
+      "intent": "disclaimer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "disclaimer",
+      "tools": []
+    },
+    {
+      "node": "router",
+      "intent": "disclaimer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "followup",
+      "intent": "disclaimer",
+      "tools": []
+    }
+  ],
+  "replies_total": 19,
+  "replies_with_numbers": 7,
+  "replies_with_invented": 0,
+  "numbers_total": 82,
+  "numbers_invented": 0
+}

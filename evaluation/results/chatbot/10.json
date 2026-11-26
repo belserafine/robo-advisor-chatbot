@@ -1,0 +1,561 @@
+{
+  "id": "10",
+  "title": "Zero-risk / high-return contradiction",
+  "version": "chatbot",
+  "settings": {
+    "provider": "Anthropic",
+    "model": "claude-haiku-5-5",
+    "thinking": "adaptive (default)",
+    "effort_extract": "low",
+    "effort_write": "medium",
+    "sampling": "provider defaults (temperature not configurable on this model)"
+  },
+  "seconds": 82.5,
+  "final_phase": "done",
+  "fields_filled_by_persona_card": [
+    "age",
+    "employment",
+    "num_dependants",
+    "income",
+    "invest_amount",
+    "other_assets",
+    "cash_needed_now",
+    "objective_str",
+    "target_yn",
+    "target",
+    "target_years",
+    "exp",
+    "rr_familiarity",
+    "desc",
+    "principal_protection",
+    "sectors"
+  ],
+  "answers": {
+    "age": "45-54",
+    "employment": "employed",
+    "num_dependants": 0,
+    "income": "$150,000+",
+    "invest_amount": 80000,
+    "other_assets": "Home paid off, pension, about $60,000 in emergency savings",
+    "cash_needed_now": 0,
+    "objective_str": "Save for retirement",
+    "target_yn": "Yes",
+    "target": 140000,
+    "target_years": "10+ years",
+    "exp": "some",
+    "rr_familiarity": "Yes",
+    "desc": "High risk",
+    "principal_protection": "No",
+    "horizon_years": "10+ years",
+    "sectors": "No restrictions"
+  },
+  "released_portfolio": true,
+  "strategy": "S2",
+  "turns": [
+    {
+      "user": null,
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I want a 30% guaranteed annual return with zero risk.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "I can't offer a guaranteed high return with zero risk. No investment can promise that. Higher potential returns come with higher risk, and returns can fall as well as rise.\n\nIf you've seen an offer promising guaranteed high returns, treat it as likely misleading. You can check whether the person or firm is registered with CIRO (the Canadian Investment Regulatory Organization) before you commit any money.\n\nWhat I can do is help you build a diversified portfolio that matches your goals and comfort with risk. Once we finish a few profile questions, I can show you the trade-offs between return and risk using historical data from April 2021 onward. Please note that this data doesn't cover 2020.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 13,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "But I saw an ad saying I could get 25% guaranteed.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "An ad promising a guaranteed return should be treated as likely misleading. No legitimate investment can guarantee a high return without risk. Higher potential returns come with higher risk, and you could lose some or all of your money.\n\nBefore you put any money into that offer, check whether the person or firm is registered with CIRO (the Canadian Investment Regulatory Organization). You can also ask them to explain, in writing, what the risks are and where the guarantee comes from.\n\nI can't assess that specific ad, but I can explain how diversified portfolios work and how their historical returns and risks compare. For personal advice on a particular product, speak with a CIRO-registered advisor.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 11,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Fine, show me the highest return portfolio you can build.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "I can show you the trade-offs, but I can't build a portfolio yet. We need to finish a few profile questions first, so that the result reflects your goals and comfort with risk.\n\nHere's what to expect. A portfolio aimed at the highest historical return usually holds more volatile holdings, so its value can swing sharply and you could lose a large share of your money in a downturn. Lower-risk portfolios tend to show smaller swings but also lower historical returns. Diversification can help balance this.\n\nOnce the profile is complete, I can compare the candidate portfolios using historical data from April 2021 onward on return, risk and diversification. Note that the data doesn't cover 2020. Then you can tell me which matters more to you: higher potential return or smaller swings in value.\n\nTo continue: What is your age? (18\u201324, 25\u201334, 35\u201344, 45\u201354, 55\u201364, 65+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 13,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "I'm 50.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your current employment status? (student / employed / self-employed / retired)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Employed full-time.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have any dependants? How many?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No dependants.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is your approximate annual income? (Under $20,000, $20,000\u2013$39,999, $40,000\u2013$59,999, $60,000\u2013$79,999, $80,000\u2013$99,999, $100,000\u2013$149,999, $150,000+)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 12,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Around $180,000 a year.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What is the amount you're looking to invest today?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$80,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have other savings or assets outside this investment (e.g., emergency fund)?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "My home is paid off, I have a pension and about $60,000 in emergency savings.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Will you need any of this money as cash right now? If so, how much?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "What are you investing for? (Save for retirement / General savings / Buy a house / Save for education / Build an emergency fund)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Retirement.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you have a specific target amount for this goal? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "If yes, how much is your target amount?",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "$140,000.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "When will you need this money? (10+ years, 4\u201310 years, 1\u20133 years, 0\u20131 years)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 7,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "In 10 years or more.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "How would you describe your investing experience? (none / some / experienced)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Some experience.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are you familiar with how risk and return are related in investing? (Yes/No/Unsure)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "Yes.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Which statement best describes you? (Very low risk / Low risk / Moderate risk / High risk)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "High risk - I'm comfortable with big swings.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Do you need your original amount fully protected, even if that means lower returns? (Yes/No)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No.",
+      "phase_after": "profiling",
+      "replies": [
+        {
+          "content": "Are there any sectors, industries, or companies you'd like to exclude? (e.g., fossil fuels, specific themes)",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        }
+      ]
+    },
+    {
+      "user": "No restrictions.",
+      "phase_after": "done",
+      "replies": [
+        {
+          "content": "Thanks, I have everything I need!",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 0,
+          "invented": []
+        },
+        {
+          "content": "## Your Recommended Portfolio\n\n**Your answers set the limits.** You chose high risk with a 10+ year horizon, so the optimizer keeps estimated volatility at or below **14.0%** and requires a minimum of **0.0%** in fixed income. No single holding can exceed **30.0%**. No profile adjustments were applied.\n\n**Why this strategy is shown.** This is the tool's default for every client, chosen in advance by design. Its expected returns are implied by market risk (reverse optimization) rather than historical averages. It holds 13 assets.\n\n**How it compares.** Strategy 1 holds 4 assets and had a backtest total return of 0.4%. The equal-weight benchmark holds 24 assets and returned 11.7% in the same test period, which was higher than this portfolio's 10.8%. One short period does not show which approach will do better in the future.\n\n**Backtest results.** The held-out test ran from 2026-04-01 to 2026-11-18 (7.6 months). Those figures are total returns for that period, not annual rates. This portfolio returned 10.8% in total, with a maximum drawdown of -4.5%.\n\n**Allocation.** The portfolio is 91.3% equity, 7.3% fixed income, and 1.3% cash and fees. The largest holdings are VTI (29.6%), QQQ (18.9%), and XIU.TO (18.7%).\n\n**Projection (illustration only).** The model estimates an expected annual return of 7.8%, produced by reverse optimization using the covariance matrix and a 60/40 reference portfolio. It is not a promise. At that rate, your $78,932.16 invested would grow to an illustrative $167,936.95 over 10 years, which exceeds your $140,000.00 target. The $1,028.38 of uninvested cash is assumed to stay flat. In the test period, this strategy's annualized return was 17.1%, so results vary and the value can end below the target.\n\n**Horizon assumption.** The 10+ years range was modelled as 10 years - the fixed value the model uses for this answer range (set in the questionnaire design), not the midpoint of the range or a figure chosen for this client.\n\n**Volatility cap.** The cap limits risk but does not guarantee the principal. The value can fall.\n\n**Past performance does not guarantee future results.**\n\n_Prices as of 2026-11-18. For educational purposes only; not financial advice. Past performance does not guarantee future results._",
+          "has_portfolio": true,
+          "metrics_cards": null,
+          "numbers": 40,
+          "invented": []
+        },
+        {
+          "content": "Feel free to ask questions about this portfolio (for example *\"show me Strategy 1\"*, *\"how did it do in 2022?\"*), tell me if something changed, or click **Start over**.",
+          "has_portfolio": false,
+          "metrics_cards": null,
+          "numbers": 2,
+          "invented": []
+        }
+      ]
+    }
+  ],
+  "pipeline_log": [
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "unrealistic",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "unrealistic"
+    },
+    {
+      "node": "router",
+      "intent": "unrealistic",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "unrealistic"
+    },
+    {
+      "node": "router",
+      "intent": "show_strategy",
+      "strategy": "S1",
+      "not_in_universe": []
+    },
+    {
+      "node": "assist",
+      "intent": "show_strategy"
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": false
+    },
+    {
+      "node": "router",
+      "intent": "answer",
+      "strategy": "none",
+      "not_in_universe": []
+    },
+    {
+      "node": "profiling",
+      "complete": true
+    },
+    {
+      "node": "portfolio",
+      "strategy": "S2",
+      "attempt": 0,
+      "used_feedback": false
+    },
+    {
+      "node": "compliance",
+      "attempt": 0,
+      "status": "APPROVE",
+      "passed": true,
+      "issues": [],
+      "issue_records": [],
+      "llm_review": {
+        "status": "APPROVE",
+        "issues": [],
+        "required_action": "None"
+      },
+      "reviewed_at": "2026-11-26T22:37:34.403080+00:00"
+    },
+    {
+      "node": "respond",
+      "status": "APPROVE"
+    }
+  ],
+  "replies_total": 22,
+  "replies_with_numbers": 8,
+  "replies_with_invented": 0,
+  "numbers_total": 109,
+  "numbers_invented": 0
+}

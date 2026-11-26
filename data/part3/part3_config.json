@@ -1,0 +1,77 @@
+{
+  "RF": 0.023,
+  "TC": 0.0005,
+  "SR_REF": 0.4,
+  "delta": 4.073940857340489,
+  "W_REF": {
+    "XIU.TO": 0.25,
+    "ZAG.TO": 0.25,
+    "VTI": 0.35,
+    "AGG": 0.15
+  },
+  "DUPLICATE_GROUPS": [
+    [
+      "SPY",
+      "VTI"
+    ],
+    [
+      "XIU.TO",
+      "XESG.TO"
+    ]
+  ],
+  "RISK_TO_VOLCAP": {
+    "low": 0.065,
+    "moderate": 0.1,
+    "high": 0.14
+  },
+  "personas": {
+    "A": {
+      "name": "A - Conservative (22, student)",
+      "budget": 4000,
+      "risk": "low",
+      "horizon": 1,
+      "vol_cap": 0.065,
+      "fi_min": 0.5,
+      "max_weight": 0.4,
+      "commodity_max": 0.1,
+      "sector_cap": 0.4,
+      "exclude": []
+    },
+    "B": {
+      "name": "B - Balanced, ESG (30, home saver)",
+      "budget": 35000,
+      "risk": "moderate",
+      "horizon": 5,
+      "vol_cap": 0.1,
+      "fi_min": 0.2,
+      "max_weight": 0.3,
+      "commodity_max": 0.3,
+      "sector_cap": 0.4,
+      "exclude": [
+        "ENB.TO",
+        "XOM",
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "QQQ"
+      ]
+    },
+    "C": {
+      "name": "C - Growth (50, retirement)",
+      "budget": 80000,
+      "risk": "high",
+      "horizon": 10,
+      "vol_cap": 0.14,
+      "fi_min": 0.0,
+      "max_weight": 0.3,
+      "commodity_max": 0.3,
+      "sector_cap": 0.4,
+      "exclude": []
+    }
+  },
+  "exec_dates": [
+    "2026-11-18",
+    "2026-04-01"
+  ],
+  "in_sample_end": "2026-03-30"
+}

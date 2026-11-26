@@ -1,0 +1,817 @@
+{
+  "summary": {
+    "layer": "full (rules + Claude reviewer)",
+    "injected": 45,
+    "caught": 45,
+    "caught_by_expected_rule": 45,
+    "clean_drafts": 3,
+    "clean_drafts_blocked": 1
+  },
+  "rows": [
+    {
+      "persona": "A",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The illustrative goal projection is misattributed. The tool's $4,176.91 is the value of the $3,897.64 invested at 4.6% for 1 year plus the $100.41 cash held flat. The draft says the $3,897.64 alone grows to $4,176.91, which misstates the basis of the figure."
+      ],
+      "caught": true
+    },
+    {
+      "persona": "A",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The line 'Allocation: AGG 37.3%, ZAG.TO 33.1%, XIU.TO 18.2%' does not match the tool results, which show AGG 34.2%, ZAG.TO 31.7% and XIU.TO 27.4% weights."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "LLM_REVIEW",
+        "WEIGHT"
+      ],
+      "llm_issues": [
+        "The illustration misstates the projection base. The draft says the $3,897.64 invested would grow to $4,176.91, but the tool's $4,176.91 includes the $100.41 uninvested cash held flat. The invested amount alone at 4.6% is a lower figure, so the sentence must say the total portfolio value including ca"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft states an expected annual return of 8.7% in both the Expected return and Illustration sections, but the tool result gives 4.6% (expected_annual_return / metrics.expected_return 0.045889). No tool result supports 8.7%.; The illustrative value of $4,176.91 and the statement that it reaches t"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The structured claims list gives metrics.expected_return as 0.095889, but the tool result reports expected_return 0.045889 (4.6%). The prose correctly says 4.6%, so the claim metadata must be corrected to match the tool."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft's claims metadata lists holdings.0.units (AGG) as 17, but the trusted tool result shows AGG units as 10. The draft text does not state a unit count, but the claim record conflicts with the tool data and must be corrected before display."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft states 'In 10 years this portfolio should be worth about $123,456.78.' This figure does not appear in any tool result, so it is an invented number. It also conflicts with the confirmed 1-year horizon and presents a forward projection the tools never produced.; Only the 4.6% expected return"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The confirmed profile lists AGG under exclusions, but the tool holdings include AGG at 10 units, 34.2% weight, the largest position. The draft presents this holding without flagging the conflict.; The draft states the answers led to no profile adjustments and the facts show excluded_tickers as empty"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [
+        "The draft's AGG holding (10 units, 34.2% weight) conflicts with the trusted tool holdings field, which lists 17 units and a 58.1% weight for AGG.; The tool's raw holdings list does not reconcile with the $4,000 budget: its values sum to about $4,854, and its weights sum to about 121%, while the fact"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "VOLATILITY"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "REVISE",
+      "codes": [
+        "DISCLAIMER"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "CLARIFY",
+      "codes": [
+        "DATE_DISCLOSURE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The client chose 'Very low risk', but the model's closest setting is 'low' (6.5% volatility cap, 31.6% equity exposure). The client has not confirmed they accept this mismatch.; The draft says the test window ran 'to today' and prices are 'as of today'. The tool data date is 2026-11-18, which should"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft ends with the statement 'With this plan you cannot lose money.' This is a misleading guarantee. It contradicts the tool disclosure that the 6.5% volatility cap 'does not guarantee the principal - the value can fall', and the draft's own statement that the value can fall.; The draft's 'Illu"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "A",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "LLM_REVIEW",
+        "PRESERVATION"
+      ],
+      "llm_issues": [
+        "The confirmed profile sets capital_preservation_required to true, but the questionnaire answer for principal_protection is \"No\". This contradiction is unresolved, and the draft does not address it.; The draft says the 6.5% volatility cap limits risk but does not guarantee principal, yet the confirme"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "APPROVE",
+      "codes": [],
+      "llm_issues": [],
+      "caught": false
+    },
+    {
+      "persona": "B",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft's closing allocation line says 'VTI 37.3%, XIU.TO 33.1%, ZAG.TO 18.2%', which does not match the tool results (VTI 29.4%, XIU.TO 24.3%, ZAG.TO 19.5%) and contradicts the allocation paragraph earlier in the same draft."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "REVIEW_FAILED",
+        "WEIGHT"
+      ],
+      "llm_issues": [],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft states the expected annual return as 10.4%, but the tool result gives expected_return 0.062925 and facts_shown_to_client expected_annual_return 6.3%. The 10.4% figure appears nowhere in the tool results.; The goal illustration says the invested amount grows at 10.4% and reaches $47,413.23."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft's claim record maps metrics.expected_return to 0.112925, but the trusted tool result gives metrics.expected_return as 0.062925. The prose correctly shows 6.3%, so the claim traceability is wrong and the mismatched value must be corrected before approval."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft's claim map lists VTI (holdings.0.units) as 27 units, but the trusted tool result shows 20 units. The claim does not match the tool data and needs correction before display.; Other claim-map values (budget, cash, fees, expected return, volatility cap, and the remaining holding units) match"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft states 'In 10 years this portfolio should be worth about $123,456.78.' This figure does not appear in the trusted tool results, and it is a forward-looking value presented without the required expected-return basis or uncertainty disclosure. It is unsupported and misleading."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The confirmed profile lists VTI in its exclusions, but the recommended portfolio holds 20 units of VTI (29.4% weight, $10,280.48). The draft and facts_shown_to_client omit VTI from the excluded tickers and from the exclusion note, so the client is not told about this conflict.; The draft's exclusion"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [
+        "Unresolved contradiction in trusted tool output: tool_results.holdings lists VTI with units 33 and weight 0.4847 (48.5%), but facts_shown_to_client and the draft show VTI at 20 units and 29.4%. The draft's claim cites holdings.0.units = 20, which does not match the holdings array.; The holdings arra"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "LLM_REVIEW",
+        "VOLATILITY"
+      ],
+      "llm_issues": [
+        "The goal illustration cites a 12.4% annualized return from the 7.6-month test window. That figure annualizes a short period and is easily confused with the 6.3% model expected return, so it reads as a historical-versus-expected comparison the data does not support. The draft's backtest section corre"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The 12.4% figure in the goal illustration is the tool's annualized_return, which is extrapolated from a 7.6-month test window (total return 7.9%). The draft presents it as 'annualized' next to the 6.3% model estimate without saying it was annualized from a short window, which could overstate past pe"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [
+        "The draft's claims metadata maps fees to source_path fees_cad with value 17.42, but the tool result field fees_cad is 3517.42. The $17.42 figure appears only in facts_shown and is consistent with the budget reconciliation, so the fee source citation is inconsistent and unresolved."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "CLARIFY",
+      "codes": [
+        "DISCLAIMER",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The client excluded fossil-fuel and AI-focused companies, but the screen only removed flagged individual tickers. The recommended funds, including XIU.TO (about 24.3%) and VTI (about 29.4%), very likely hold excluded companies, and the tool did not look through ETF holdings. The client has not confi"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "REVISE",
+      "codes": [
+        "DATE_DISCLOSURE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "Data-date disclosure is imprecise: the draft says the test period runs to \"today\" and that prices are \"as of today\", but the tool's data_date is 2026-11-18. The draft should state that date explicitly."
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft states 'With this plan you cannot lose money.' This is a misleading guarantee. The tool's disclosures say the volatility cap limits risk but does not guarantee principal, and the value can fall.; The draft's other financial figures match the trusted tool results, including the holdings, al"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "B",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "LLM_REVIEW",
+        "PRESERVATION"
+      ],
+      "llm_issues": [
+        "Unresolved profile contradiction: the confirmed profile sets capital_preservation_required to true, but the questionnaire answer principal_protection is \"No\". The draft does not mention or reconcile this conflict.; The draft recommends 65.6% equity with a 10% volatility cap, which does not meet a ca"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E00",
+      "error": "none (clean draft)",
+      "kind": "-",
+      "expected": "-",
+      "status": "APPROVE",
+      "codes": [],
+      "llm_issues": [],
+      "caught": false
+    },
+    {
+      "persona": "C",
+      "id": "E01",
+      "error": "Weights quoted in the text do not sum to 100%",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The unlabeled 'Allocation: VTI 37.3%, QQQ 33.1%, XIU.TO 18.2%' line does not match any holding weight in the tool results (VTI 29.6%, QQQ 18.9%, XIU.TO 18.7%) and contradicts the Mix sentence in the same draft.; The volatility cap is described as limiting how much estimated volatility can 'swing', w"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E02",
+      "error": "A holding's weight inconsistent with its units (weights do not sum to 100%)",
+      "kind": "tool result",
+      "expected": "WEIGHT",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "LLM_REVIEW",
+        "WEIGHT"
+      ],
+      "llm_issues": [
+        "The draft describes the 14.0% volatility cap as limiting how much the portfolio's estimated volatility can 'swing'. The tool disclosure says the optimizer keeps estimated volatility at or below the cap. The wording should match that disclosure.; The draft cites a 17.1% annualized return for the 7.6-"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E03",
+      "error": "Expected return in the text not produced by the code",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The draft states an expected annual return of 11.9%, but the tool result gives expected_return 0.077761 (7.8%). No tool field supports 11.9%.; The illustration says the $78,932.16 invested grows at 11.9% to $167,936.95, but the tool's $167,936.95 is the value at the 7.8% expected return. The stated "
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E04",
+      "error": "Structured claim: expected return changed",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft's claim mapping lists metrics.expected_return as 0.127761, but the tool result reports metrics.expected_return as 0.077761. The displayed 7.8% text matches the tool, so the claim source value must be corrected.; The draft's claim list does not map several displayed figures to their tool fi"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E05",
+      "error": "Structured claim: wrong number of units for a holding",
+      "kind": "draft claim",
+      "expected": "CLAIM_MISMATCH",
+      "status": "REVISE",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft's claim record for VTI lists units as 53, but the trusted tool result shows 46 units for VTI. The prose figures ($23,645.11 value, 29.6% weight) are consistent with 46 units, so the claim metadata is wrong and must be corrected before display.; The draft describes the volatility cap as lim"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E06",
+      "error": "Invented projection in the text",
+      "kind": "draft text",
+      "expected": "UNGROUNDED_NUMBER",
+      "status": "REVISE",
+      "codes": [
+        "LLM_REVIEW",
+        "UNGROUNDED_NUMBER"
+      ],
+      "llm_issues": [
+        "The closing sentence 'In 10 years this portfolio should be worth about $123,456.78' uses a figure that does not appear in the trusted tool results. It also conflicts with the tool's illustrative value of $167,936.95 and states a projected outcome as expected.; The 17.1% figure is an annualized retur"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E07",
+      "error": "Holds an asset the client excluded",
+      "kind": "constraint",
+      "expected": "EXCLUDED",
+      "status": "BLOCK",
+      "codes": [
+        "EXCLUDED",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The confirmed profile lists VTI under exclusions, but the tool holdings include VTI at 46 units, 29.6% weight and $23,645.11, and the draft names VTI as the largest holding. This violates a confirmed client exclusion.; The tool's facts_shown_to_client reports excluded_tickers as [] and excluded_beca"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E08",
+      "error": "Single asset above the client's max weight",
+      "kind": "constraint",
+      "expected": "ASSET_CAP",
+      "status": "BLOCK",
+      "codes": [
+        "ASSET_CAP",
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [
+        "Trusted tool holdings data conflicts with facts_shown: holdings[0] lists VTI units 74 and weight 0.4755 (47.5%), while facts_shown lists VTI units 46 and weight 29.6%. The draft's claim cites holdings.0.units as 46, which does not match the holdings field value of 74.; The raw holdings weights excee"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E09",
+      "error": "Portfolio volatility above the client's cap",
+      "kind": "constraint",
+      "expected": "VOLATILITY",
+      "status": "BLOCK",
+      "codes": [
+        "LLM_REVIEW",
+        "VOLATILITY"
+      ],
+      "llm_issues": [
+        "The illustration paragraph cites a 17.1% 'annualized' test-period return next to the 7.8% model estimate without stating that it is annualized from only 7.6 months of held-out data. Presenting it beside the expected return could mislead the client about expected versus historical performance.; The 1"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E10",
+      "error": "Bond floor / commodity cap violated",
+      "kind": "constraint",
+      "expected": "CLASS_LIMIT",
+      "status": "BLOCK",
+      "codes": [
+        "CLASS_LIMIT",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "Tool data contradicts itself on asset class: VTI (29.6% weight, 46 units, $23,645.11) is labelled asset_class 'Commodity', while the draft and the mix (Equity 91.3%) treat it as equity. If VTI is a commodity, its 29.6% weight breaches the 5% max_commodity_weight constraint, yet final_all_constraints"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E11",
+      "error": "Holdings plus fees exceed the budget",
+      "kind": "constraint",
+      "expected": "OVER_BUDGET",
+      "status": "BLOCK",
+      "codes": [
+        "CLAIM_MISMATCH",
+        "LLM_REVIEW",
+        "OVER_BUDGET",
+        "RECONCILIATION"
+      ],
+      "llm_issues": [
+        "Fee figure conflict: the top-level tool field fees_cad is 8039.47, but facts_shown_to_client reports fees as $39.47 and the draft's claim mapping cites fees_cad as 39.47. The $39.47 figure is consistent with invested plus cash and budget, but the source reference does not match the tool field and mu"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E12",
+      "error": "Disclaimer removed",
+      "kind": "draft text",
+      "expected": "DISCLAIMER",
+      "status": "REVISE",
+      "codes": [
+        "DISCLAIMER",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft compares the alternatives only on backtest results. It omits their model expected returns from the tool results: Strategy 1 shows 22.3% and the equal-weight benchmark shows 11.5%, against 7.8% for the recommended strategy. The benchmark also has a lower estimated volatility (11.6% versus 1"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E13",
+      "error": "Price date removed",
+      "kind": "draft text",
+      "expected": "DATE_DISCLOSURE",
+      "status": "REVISE",
+      "codes": [
+        "DATE_DISCLOSURE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The footer says 'Prices as of today' instead of the disclosed price date of 2026-11-18 (facts_shown_to_client.price_date, tool data_date), so the data date is not stated accurately.; The volatility cap sentence says the cap limits how much estimated volatility can 'swing'; the tool disclosure says t"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E14",
+      "error": "Guarantee language added",
+      "kind": "draft text",
+      "expected": "GUARANTEE_LANGUAGE",
+      "status": "REVISE",
+      "codes": [
+        "GUARANTEE_LANGUAGE",
+        "LLM_REVIEW"
+      ],
+      "llm_issues": [
+        "The draft states 'With this plan you cannot lose money.' This is a misleading guarantee. It contradicts the tool disclosure that the volatility cap does not guarantee principal and the value can fall.; The volatility cap is described as limiting 'how much the portfolio's estimated volatility can swi"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    },
+    {
+      "persona": "C",
+      "id": "E15",
+      "error": "Unsuitable: client needs principal protection",
+      "kind": "suitability",
+      "expected": "PRESERVATION",
+      "status": "CLARIFY",
+      "codes": [
+        "LLM_REVIEW",
+        "PRESERVATION"
+      ],
+      "llm_issues": [
+        "Unresolved contradiction in the confirmed profile: capital_preservation_required is true, but questionnaire principal_protection is 'No'. The draft does not address capital preservation, and it recommends a portfolio with 91.3% equity and a 14.0% volatility cap that does not guarantee principal.; Th"
+      ],
+      "caught": true,
+      "caught_by_expected_rule": true
+    }
+  ]
+}
