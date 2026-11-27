@@ -13,6 +13,14 @@
 # Migration note: moving off the Gemini API (hit its 20 req/day free-tier wall
 # mid-test-run — see logs/error_quota_exhausted_20261124_1701.json) onto the
 # paid Claude API, mostly Claude Haiku for cost.
+#
+# Update (2026-11-26): the real chatbot's questionnaire grew by two compliance
+# questions (cash_needed_now, principal_protection — see evaluation/scripts.py
+# on the feature branch, now merged into main). Added to the system prompt and
+# to scripts 01-09 below (the KYC/profiling scripts) so Baseline A is scored on
+# the same 8-field basis as the real chatbot. Scripts 10-20 are edge-case/
+# behavioural tests, not full-KYC tests, so they're left as-is to match the
+# course doc's pass criteria for those scripts.
 # ------------------------------------------
 from dotenv import load_dotenv
 import os
@@ -41,9 +49,11 @@ SYSTEM_PROMPT = """You are a robo-advisor chatbot for a retail investing platfor
 
 Your job, in order:
 1. If you do not yet know the client's age, employment status, dependants,
-   income, investable amount, other savings, investment objective, target
-   amount (if any), time horizon, investing experience, risk-and-return
-   familiarity, self-described risk tolerance, and any sector/company
+   income, investable amount, other savings, whether they need any of this
+   money as cash right now, investment objective, target amount (if any),
+   time horizon, investing experience, risk-and-return familiarity,
+   self-described risk tolerance, whether they need their original amount
+   fully protected even if that means lower returns, and any sector/company
    exclusions — ask for whatever is missing, one or two questions at a time.
 2. Once you have enough to proceed, recommend a portfolio: an asset
    allocation (equities/fixed income/etc.) and, if asked, specific tickers
@@ -84,12 +94,14 @@ RUN_METADATA = {
 # (the bot's questions in between are generated live by the model each run —
 # see run_script()). Keyed by script number so results line up with the
 # "Script #" column in the comparison tracker.
+
 SCRIPTS: dict[int, list[str]] = {
     1: [
         "Hi, I'd like to invest some money.",
         "I'm 22, a final-year undergrad with no job yet.",
         "I have $4,000 and I want to keep it safe for about a year — might need it for moving costs.",
         "I know almost nothing about investing. No sector restrictions.",
+        "I don't need any of this as cash right now, and small ups and downs are okay as long as it's kept as safe as possible.",
         "Can you show me the exact units to buy?",
     ],
     2: [
@@ -100,6 +112,7 @@ SCRIPTS: dict[int, list[str]] = {
     3: [
         "I'm 30, working full-time, and I want to invest $35,000 to save for a home down payment in about 5 years.",
         "I want to exclude fossil fuel companies and AI companies.",
+        "None of this needs to be cash right now, and I'm okay with some ups and downs — I don't need the principal fully protected.",
         "What am I actually buying?",
     ],
     4: [
@@ -109,6 +122,7 @@ SCRIPTS: dict[int, list[str]] = {
     ],
     5: [
         "I'm 50, high earner, own my home outright, and I want to grow $80,000 for retirement over 10 years. No restrictions.",
+        "I don't need any of it as cash right now, and I don't need the principal protected.",
         "What's the recommended portfolio?",
         "How much of each should I buy?",
     ],
@@ -119,16 +133,19 @@ SCRIPTS: dict[int, list[str]] = {
     ],
     7: [
         "I'm that same conservative student — $4,000, 1 year. Can I buy fractional shares?",
+        "I don't need any of this as cash right now, and small ups and downs are okay as long as it's kept as safe as possible.",
         "Yes, my broker supports fractional shares. Show me the difference.",
         "Which should I go with?",
     ],
     8: [
         "I have the ESG constraints but I'm curious — how much return am I giving up by excluding fossil fuel and AI stocks?",
+        "None of this needs to be cash right now, and I'm okay with some ups and downs — I don't need the principal fully protected.",
         "Can you give me the numbers?",
         "Is it worth giving up that return for ESG?",
     ],
     9: [
         "I'm Persona C — $80,000, 10 years, retirement. Can you show me both strategies side by side?",
+        "I don't need any of it as cash right now, and I don't need the principal protected.",
         "Which one do you recommend?",
         "I prefer the more diversified one.",
     ],
