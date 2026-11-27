@@ -7,6 +7,8 @@ reviews each recommendation before the client sees it.
 
 > For educational purposes only; not financial advice. Past performance does not guarantee future results.
 
+**Live demo:** https://robo-advisor-chatbot-qhjypkcnpviksrsvbgc9df.streamlit.app (please don't spam it, using a team member's own API budget)
+
 ---
 
 ## 1. Quick start
@@ -25,6 +27,23 @@ streamlit run app.py                                    # opens http://localhost
 On Google Colab, store the key in **Colab Secrets** and load it with
 `os.environ["ANTHROPIC_API_KEY"] = userdata.get("ANTHROPIC_API_KEY")`.
 Never hard-code a key.
+
+### Running the notebooks on Google Colab
+
+Three notebooks are submitted for Part 5: [`part5_chatbot.ipynb`](part5_chatbot.ipynb) (the real chatbot,
+Part 4 validation tests, 20-script evaluation and error-injection results), 
+[`baseline-a/baseline_a.ipynb`](baseline-a/baseline_a.ipynb) (Baseline A), and [`baseline-b/baseline_b.ipynb`](baseline-a/baseline_a.ipynb) (Baseline B). All are self-contained:
+
+1. Open [colab.research.google.com](https://colab.research.google.com) and upload the notebook
+   (File → Upload notebook), or File → Open notebook → GitHub and paste this repo's URL.
+2. In the left sidebar, click the key icon (**Secrets**) and add a secret named `ANTHROPIC_API_KEY`
+   with your own key, toggled on for this notebook.
+3. Runtime → Run all. The first cell clones this repo into the Colab session so every module and
+   data file it needs is present — no manual uploads required.
+4. If the submission is graded from the Quercus-uploaded files instead of live GitHub access, upload
+   this whole repo folder (unzipped, keeping the folder structure — `data/`, `evaluation/`,
+   `baseline-a/`, and the `.py` files alongside the notebook) to the Colab session's file browser, skip
+   the `git clone` cell, and run the rest as-is.
 
 Terminal-only chat (no UI), which also prints the LangGraph diagram in Mermaid format:
 
